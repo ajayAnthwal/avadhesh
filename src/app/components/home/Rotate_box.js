@@ -93,14 +93,14 @@ const RotateBox = () => {
       </div>
     </div>
     </div>
-    <div class="container">
-        <div class="text-center mb-4 schedule">
+    <div className="container">
+        <div className="text-center mb-4 schedule">
         <h1 className="text-center about-title text-4xl font-bold mb-4">Have Questions?</h1>
-          <button class="btn-gray-call">
+          <button className="btn-gray-call">
             Schedule a call with us
           </button>
-          <p class="paragraph">
-            <a href="#" class="text-dark text-decoration-underline call-paragraph"
+          <p className="paragraph">
+            <a href="#" className="text-dark text-decoration-underline call-paragraph"
               >Click on the FAQs page to know more about how we can help you?</a
             >
           </p>
