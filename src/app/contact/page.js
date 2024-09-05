@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Sliders from "../components/sliders/sliders";
-import FAQ from "../components/contact_us/Faq";
+import FAQ from "@/app/components/contact_us/FAQ";
 import Call_us from "../components/footer/Call_us";
 
 export default function Contact() {
@@ -15,13 +15,13 @@ export default function Contact() {
               <h2 className="text-3xl font-bold mb-6">Get in touch with us</h2>
               <p className="text-gray-600 mb-8 text-justify">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s. Lorem Ipsum
-                is simply dummy text of the printing and typesetting industry.
+                industry. Lorem Ipsum has been the industry standard
+                dummy text ever since the 1500s.Lorem Ipsum is simply dummy text
+                of the printing and typesetting industry. Lorem Ipsum has been
+                the industry standard dummy text ever since the 1500s.
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                industry. Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry.
               </p>
 
               <div className="space-y-6">
