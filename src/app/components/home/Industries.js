@@ -10,12 +10,12 @@ const Industries = () => {
         <p className="text-center text-lg mb-8">
           Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
           <br />
-          industry. Lorem Ipsum has been the industry's standard.
+          industry. Lorem Ipsum has been the industry&#39;s standard.
         </p>
 
         <div className="flex justify-center px-4-5 w-full">
           <div className="flex gap-4 w-full box-third">
-            <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-1/3 h-96 box-third-container ">
+            <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-1/3 h-96 box-third-container">
               <div className="h-44 bg-white rounded-md mb-4"></div>
               <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
                 Button

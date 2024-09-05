@@ -36,19 +36,18 @@ const HomePage = () => {
             </h2>
             <p className="text-justify">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industry&#39;s standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
+              Ipsum has been the industry standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled
               it to make a type specimen book. Lorem Ipsum is simply dummy text
               of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the Lorem
-              it.
+              industry standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type
+              specimen book. Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been the Lorem it.
             </p>
           </div>
         </div>
@@ -59,9 +58,9 @@ const HomePage = () => {
             Latest Highlight
           </h1>
           <p className="text-center text-lg mb-8">
-            Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
             <br />
-            industry. Lorem Ipsum has been the industry's standard.
+            industry. Lorem Ipsum has been the industry&#39;s standard.
           </p>
           <div className="container-custom">
             <div className="flex flex-col md:flex-row gap-7">

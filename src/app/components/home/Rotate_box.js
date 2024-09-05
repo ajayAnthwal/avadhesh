@@ -43,7 +43,7 @@ const RotateBox = () => {
           <p className="text-center text-lg mb-8">
             Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
             <br />
-            industry. Lorem Ipsum has been the industry's standard.
+            industry. Lorem Ipsum has been the industry&#39;s standard.
           </p>
     <div className="relative">
       <div className="slider slider-container overflow-hidden relative w-full h-full">
