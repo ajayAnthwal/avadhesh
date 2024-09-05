@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,24 +50,24 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
-          <a href="#" className="hover:text-gray-900">
+          <Link href="/" className="hover:text-gray-900">
             Home
-          </a>
-          <a href="#" className="hover:text-gray-900">
+          </Link>
+          <Link href="/what-we-do" className="hover:text-gray-900">
             What we do
-          </a>
-          <a href="#" className="hover:text-gray-900">
+          </Link>
+          <Link href="/insights" className="hover:text-gray-900">
             Insights
-          </a>
-          <a href="#" className="hover:text-gray-900">
+          </Link>
+          <Link href="/careers" className="hover:text-gray-900">
             Careers
-          </a>
-          <a href="#" className="hover:text-gray-900">
+          </Link>
+          <Link href="/about" className="hover:text-gray-900">
             About
-          </a>
-          <a href="#" className="hover:text-gray-900">
+          </Link>
+          <Link href="/contact" className="hover:text-gray-900">
             Contact Us
-          </a>
+          </Link>
           <div className="text-gray-700 hover:text-gray-900">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,24 +93,24 @@ export default function Header() {
           isOpen ? "block res-nav" : "hidden"
         } md:hidden bg-white text-sm font-medium text-gray-700 space-y-2 px-6 py-4 shadow-md`}
       >
-        <a href="#" className="block hover:text-gray-900">
+        <Link href="/" className="block hover:text-gray-900">
           Home
-        </a>
-        <a href="#" className="block hover:text-gray-900">
+        </Link>
+        <Link href="/what-we-do" className="block hover:text-gray-900">
           What we do
-        </a>
-        <a href="#" className="block hover:text-gray-900">
+        </Link>
+        <Link href="/insights" className="block hover:text-gray-900">
           Insights
-        </a>
-        <a href="#" className="block hover:text-gray-900">
+        </Link>
+        <Link href="/careers" className="block hover:text-gray-900">
           Careers
-        </a>
-        <a href="#" className="block hover:text-gray-900">
+        </Link>
+        <Link href="/about" className="block hover:text-gray-900">
           About
-        </a>
-        <a href="#" className="block hover:text-gray-900">
+        </Link>
+        <Link href="/contact" className="block hover:text-gray-900">
           Contact Us
-        </a>
+        </Link>
         <div className="block text-gray-700 hover:text-gray-900">
           <svg
             xmlns="http://www.w3.org/2000/svg"
