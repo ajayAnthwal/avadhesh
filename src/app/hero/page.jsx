@@ -4,6 +4,9 @@ import "../css/slider.css";
 import Home_page from "../components/home/Home_page";
 import Industries from "../components/home/Industries";
 import Rotate_box from "../components/home/Rotate_box";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,10 +60,10 @@ const Hero = () => {
         </div>
 
         <button className="prev" onClick={prevSlide}>
-          &#10094;
+        <MdKeyboardArrowLeft />
         </button>
         <button className="next" onClick={nextSlide}>
-          &#10095;
+        <MdKeyboardArrowRight />
         </button>
 
         <div className="dots">

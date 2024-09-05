@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import '../../css/slider.css';
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const RotateBox = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -70,13 +72,14 @@ const RotateBox = () => {
           className="prev absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-2 py-1"
           onClick={prevSlide}
         >
-          &#10094;
+         <MdKeyboardArrowLeft />
+
         </button>
         <button
           className="next absolute top-1/2 right-2 transform -translate-y-1/2  text-white px-2 py-1"
           onClick={nextSlide}
         >
-          &#10095;
+         <MdKeyboardArrowRight />
         </button>
 
         <div className="dots absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
