@@ -63,7 +63,7 @@ const Footer = () => {
           <ul className="list-none space-y-2">
             <li>
               <a href="#" className="text-gray-800 hover:text-gray-600">
-                Terms & Conditions
+                Terms and Conditions
               </a>
             </li>
             <li>
