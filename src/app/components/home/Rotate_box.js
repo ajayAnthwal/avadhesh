@@ -62,7 +62,7 @@ const RotateBox = () => {
                 <div className="rotated-box bg-gray-500 w-32 h-32 transform rotate-45"></div>
               </div>
               <div className="flex-grow text-center">
-                <h3 className="text-xl">{slide.content}</h3>
+                <h3 className="text-xl text-res">{slide.content}</h3>
               </div>
             </div>
           ))}

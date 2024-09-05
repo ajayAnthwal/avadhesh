@@ -53,7 +53,7 @@ const Hero = () => {
             <div className="slide" key={index}>
               <div className="d-flex flex-column">
                 <h3 className="w-241 mb-20">{slide.content}</h3>
-                <button className="btn-gray">{slide.buttonText}</button>
+                <button className="btn-gray btn-res">{slide.buttonText}</button>
               </div>
             </div>
           ))}
