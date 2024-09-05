@@ -248,4 +248,13 @@ footer .bi:hover {
   margin-top: 15px;
   width: 94%;
 }
+
+.res-nav a{
+  text-align: center;
+  padding-top: 24px;
+}
+
+.res-nav svg{
+  margin: auto;
+}
 }

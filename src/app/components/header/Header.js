@@ -89,7 +89,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       <nav
         className={`${
-          isOpen ? "block" : "hidden"
+          isOpen ? "block res-nav" : "hidden"
         } md:hidden bg-white text-sm font-medium text-gray-700 space-y-2 px-6 py-4 shadow-md`}
       >
         <a href="#" className="block hover:text-gray-900">
