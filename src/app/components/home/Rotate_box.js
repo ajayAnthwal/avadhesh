@@ -40,12 +40,13 @@ const RotateBox = () => {
     <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
       <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
-            Latest Highlight
+          CFaaS
           </h1>
           <p className="text-center text-lg mb-8">
-            Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
+          Worlds first and only Corporate Functions as a Service company.
+         
             <br />
-            industry. Lorem Ipsum has been the industry&#39;s standard.
+            Your Partner-in-Growth
           </p>
     <div className="relative">
       <div className="slider slider-container overflow-hidden relative w-full h-full">

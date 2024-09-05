@@ -74,8 +74,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr className="my-6 border-gray-300" />
-      <div className="text-center mt-3 mb-5">
+      {/* <hr className="my-6 border-gray-300" /> */}
+      <div className="text-center mt-9 mb-5">
         <b className="text-lg">Let’s get social</b>
         <br />
         <div className="flex justify-center space-x-4 mt-2">
