@@ -52,6 +52,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <img src="./Vector (1).png" alt="img" className="w-full"/>
       <div className="hero top-section bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9]">
         <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
           <h1 className="text-center about-title text-4xl font-bold mb-4">

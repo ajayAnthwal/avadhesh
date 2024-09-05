@@ -35,6 +35,8 @@ const RotateBox = () => {
   }, [currentSlide]);
 
   return (
+    <>
+     <img src="./Vector (2).png" alt="img" className="w-full"/>
     <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
       <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
@@ -52,11 +54,11 @@ const RotateBox = () => {
           style={{
             transform: `translateX(-${currentSlide * 100}%)`,
           }}
-        >
+          >
           {slides.map((slide, index) => (
             <div
-              className="slide flex justify-around w-full h-full rotate-cards"
-              key={index}
+            className="slide flex justify-around w-full h-full rotate-cards"
+            key={index}
             >
               <div className="flex-none">
                 <div className="rotated-box bg-gray-500 w-32 h-32 transform rotate-45"></div>
@@ -71,27 +73,27 @@ const RotateBox = () => {
         <button
           className="prev absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-2 py-1"
           onClick={prevSlide}
-        >
+          >
          <MdKeyboardArrowLeft />
 
         </button>
         <button
           className="next absolute top-1/2 right-2 transform -translate-y-1/2  text-white px-2 py-1"
           onClick={nextSlide}
-        >
+          >
          <MdKeyboardArrowRight />
         </button>
 
         <div className="dots absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {slides.map((_, index) => (
             <span
-              key={index}
-              className={`dot w-3 h-3 rounded-full bg-gray-300 ${
-                index === currentSlide ? "bg-gray-800" : ""
-              }`}
+            key={index}
+            className={`dot w-3 h-3 rounded-full bg-gray-300 ${
+              index === currentSlide ? "bg-gray-800" : ""
+            }`}
               onClick={() => goToSlide(index)}
-            ></span>
-          ))}
+              ></span>
+            ))}
         </div>
       </div>
     </div>
@@ -110,6 +112,7 @@ const RotateBox = () => {
         </div>
         </div>
     </div>
+            </>
   );
 };
 
