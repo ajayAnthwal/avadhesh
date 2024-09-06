@@ -4,10 +4,10 @@ const Featured_blogs = () => {
   return (
     <div className="mt-7">
       <img src="./Vector (2).png" alt="img" className="w-full" />
-      <section className="py-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+      <section className="py-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop">
         <div className="container">
           <h1 className="text-center text-3xl font-bold mb-6">
-            Our Featured blogs
+          Our Featured blogs
           </h1>
           <p className="text-center text-lg mb-8">
             Lorem Ipsum is simply dummy text of the printing and typesetting

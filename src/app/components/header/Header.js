@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md">
-      <div className="flex items-center justify-between py-4 px-6">
+      <div className="flex items-center justify-between py-4 px-6 header-res">
         {/* Logo Section */}
         <div className="flex items-center">
           <Image

@@ -173,6 +173,7 @@ export default function Contact() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          className="res-desktop"
         ></iframe>
       </div>
       <div className="mt-5">
