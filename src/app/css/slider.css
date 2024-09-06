@@ -199,13 +199,18 @@ footer .bi:hover {
   text-decoration: none;
 }
 
-.footer-col{
+.footer-container-left{
 margin-left: 64px;
 }
 
 /* footer end  */
 
 @media screen and (max-width: 767px) {
+  
+.footer-container-left{
+  margin-left: 2px;
+  }
+  
   .px-4-5 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -271,4 +276,14 @@ margin-left: 64px;
   .res-nav svg {
     margin: auto;
   }
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 450px !important;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
 }

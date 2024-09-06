@@ -4,7 +4,7 @@ import "../../css/slider.css";
 const Footer = () => {
   return (
     <div className="container mx-auto py-8  px-4-5">
-      <div className="flex justify-between w-full gap-9 footer footer-col">
+      <div className="flex justify-center w-full gap-9 footer footer-container-left">
         <div className="w-1/3 footer-container">
           <h6 className="text-lg font-semibold mb-2">Reach us</h6>
           <p className="flex items-start mb-2">
@@ -74,6 +74,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* <hr className="my-6 border-gray-300" /> */}
       <div className="text-center mt-9 mb-5">
         <b className="text-lg">Let’s get social</b>
         <br />
