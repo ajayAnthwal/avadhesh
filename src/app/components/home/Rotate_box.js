@@ -51,8 +51,8 @@ const RotateBox = () => {
             Your Partner-in-Growth
           </p>
 
-          {/* The slider container with custom styles for 1920px screen width */}
-          <div className="relative border border-black w-full 2xl:w-[80%] 2xl:mx-auto">
+          {/* The slider container with responsive width */}
+          <div className="relative border border-black w-full max-w-screen-xl mx-auto">
             <div className="slider slider-container overflow-hidden relative w-full h-full">
               <div
                 className="slider-content flex transition-transform duration-500"
