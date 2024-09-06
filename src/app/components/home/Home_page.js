@@ -6,7 +6,6 @@ const HomePage = () => {
     <>
       <div className="container mx-auto my-6 px-4-5">
         <div className="flex flex-col md:flex-row gap-6 justify-between">
-          {/* Left Section */}
           <div
             className="flex justify-center items-center md:justify-start w-full md:w-1/2 video-play"
             style={{ backgroundColor: "#D9D9D9" }}
@@ -28,8 +27,6 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Section */}
           <div className="w-full md:w-1/2">
             <h2 className="text-left text-2xl font-bold mb-4">
               Lorem Ipsum is simply dummy
@@ -52,7 +49,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <img src="./Vector (1).png" alt="img" className="w-full"/>
+      <img src="./Vector (1).png" alt="img" className="w-full" />
       <div className="hero top-section bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9]">
         <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
@@ -65,7 +62,6 @@ const HomePage = () => {
           </p>
           <div className="container-custom">
             <div className="flex flex-col md:flex-row gap-7">
-              {/* Left Panel */}
               <div className="md:w-1/4 mb-4 md:mb-0">
                 <div className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg">
                   <div className="content text-lg landing">
@@ -73,7 +69,6 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {/* Right Panel */}
               <div className="md:w-3/4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="box h-64 bg-white rounded-md	"></div>

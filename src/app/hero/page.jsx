@@ -1,5 +1,4 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import "../css/slider.css";
 import Home_page from "../components/home/Home_page";
 import Industries from "../components/home/Industries";

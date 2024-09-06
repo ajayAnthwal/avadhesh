@@ -10,7 +10,7 @@ const AvatarsSection = () => {
           <h2 className="text-xl font-bold mb-6">Meet the AvaStars</h2>
           <div className="flex items-center justify-between">
             <AiOutlineLeft size={30} className="cursor-pointer" />
-            <div className="grid grid-cols-3 gap-4 w-full px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full px-4">
               <div className="border border-black rounded-lg w-full h-96 bg-white"></div>
               <div className="border border-black rounded-lg w-full h-96 bg-white"></div>
               <div className="border border-black rounded-lg w-full h-96 bg-white"></div>

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Call_us = () => {
   return (
     <div>
-         <div className="container mt-6">
+      <div className="container mt-6">
         <div className="text-center mb-4 schedule">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
             Have Questions?
@@ -19,9 +19,9 @@ const Call_us = () => {
           </p>
         </div>
       </div>
-      <hr/>
+      <hr />
     </div>
-  )
-}
+  );
+};
 
-export default Call_us
+export default Call_us;

@@ -3,12 +3,12 @@ import React from "react";
 const Industries = () => {
   return (
     <section className="py-12">
-      <div className="container mx-auto">
+      <div className="container">
         <h1 className="text-center text-3xl font-bold mb-6">
           Industries we served
         </h1>
         <p className="text-center text-lg mb-8">
-          Lorem Ipsum is simply dummy text of the printing and typesetting{" "}
+          Lorem Ipsum is simply dummy text of the printing and typesetting
           <br />
           industry. Lorem Ipsum has been the industry standard.
         </p>
