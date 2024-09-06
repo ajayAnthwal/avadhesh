@@ -21,15 +21,15 @@ const Insights = () => {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="relative bg-gray-300  pt-16 px-6 pb-6 rounded-lg shadow-lg text-center"
+                  className="relative bg-gray-300 pt-16 px-6 pb-6 rounded-lg shadow-lg text-center"
                 >
                   <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full border border-black"></div>
 
                   <p className="mt-12 text-gray-700">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type.
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type.
                   </p>
                 </div>
               ))}
