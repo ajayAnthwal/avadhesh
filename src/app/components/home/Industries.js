@@ -3,7 +3,7 @@ import React from "react";
 const Industries = () => {
   return (
     <section className="py-12">
-      <div className="container">
+      <div className="container mx-auto px-4 lg:px-20">
         <h1 className="text-center text-3xl font-bold mb-6">
           Industries we served
         </h1>
@@ -13,26 +13,30 @@ const Industries = () => {
           industry. Lorem Ipsum has been the industry standard.
         </p>
 
-        <div className="flex justify-center px-4-5 w-full">
-          <div className="flex gap-4 w-full box-third">
-            <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-1/3 h-96 box-third-container">
-              <div className="h-44 bg-white rounded-md mb-4"></div>
-              <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                Button
-              </button>
-            </div>
-            <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-1/3 h-96  box-third-container">
-              <div className="h-44 bg-white rounded-md mb-4"></div>
-              <button className="btn-custom flex justify-center m-auto mt-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                Button
-              </button>
-            </div>
-            <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-1/3 h-96  box-third-container">
-              <div className="h-44 bg-white rounded-md mb-4"></div>
-              <button className="btn-custom mt-4 flex justify-center m-auto bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                Button
-              </button>
-            </div>
+        {/* Flex container for the industries */}
+        <div className="flex flex-col lg:flex-row justify-center gap-6 w-full">
+          {/* Single Box */}
+          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
+            <div className="h-44 bg-white rounded-md mb-4"></div>
+            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+              Button
+            </button>
+          </div>
+
+          {/* Single Box */}
+          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
+            <div className="h-44 bg-white rounded-md mb-4"></div>
+            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+              Button
+            </button>
+          </div>
+
+          {/* Single Box */}
+          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
+            <div className="h-44 bg-white rounded-md mb-4"></div>
+            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+              Button
+            </button>
           </div>
         </div>
       </div>

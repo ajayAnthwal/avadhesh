@@ -1,12 +1,13 @@
 import React from "react";
 import Sliders from "../components/sliders/sliders";
-import Industries from "../components/home/Industries";
+import Featured_blogs from "../components/insight/Featured_blogs";
+import EbookSection from "../components/insight/EbookSection";
 
 const Insights = () => {
   return (
     <div>
       <Sliders />
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="w-full px-4-5 mt-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold">What we do</h2>
@@ -28,7 +29,7 @@ const Insights = () => {
                   <p className="mt-12 text-gray-700">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
-                    industry&apos;s standard dummy text ever since the 1500s,
+                    industry standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type.
                   </p>
                 </div>
@@ -36,7 +37,8 @@ const Insights = () => {
           </div>
         </div>
       </div>
-      <Industries />
+      <Featured_blogs />
+      <EbookSection />
     </div>
   );
 };

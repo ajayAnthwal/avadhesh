@@ -4,7 +4,8 @@ import "../../css/slider.css";
 const HomePage = () => {
   return (
     <>
-      <div className="container mx-auto my-6 px-4-5 mt-10">
+      {/* Video Section */}
+      <div className="container mx-auto my-6 px-4 lg:px-20 mt-10">
         <div className="flex flex-col md:flex-row gap-6 justify-between">
           <div
             className="flex justify-center items-center md:justify-start w-full md:w-1/2 video-play"
@@ -49,33 +50,39 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
       <img src="./Vector (1).png" alt="img" className="w-full" />
-      <div className="hero top-section bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9]">
-        <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
-          <h1 className="text-center about-title text-4xl font-bold mb-4">
+
+      {/* Latest Highlight Section */}
+      <div className="hero top-section bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] py-12">
+        <div className="container mx-auto px-4 lg:px-20 text-center">
+          <h1 className="text-center about-title text-4xl font-bold mb-6">
             Latest Highlight
           </h1>
-          <p className="text-center text-lg mb-8">
+          <p className="text-center text-lg mb-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             <br />
             industry. Lorem Ipsum has been the industry&#39;s standard.
           </p>
-          <div className="container-custom">
-            <div className="flex flex-col md:flex-row gap-7">
-              <div className="md:w-1/4 mb-4 md:mb-0">
-                <div className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg">
-                  <div className="content text-lg landing">
-                    Landing / Blog / Highlights
-                  </div>
+
+          {/* Flex container for the "Latest Highlight" section */}
+          <div className="flex flex-col lg:flex-row gap-10">
+            {/* Left Panel */}
+            <div className="lg:w-1/4 mb-4 lg:mb-0">
+              <div className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg">
+                <div className="content text-lg landing">
+                  Landing / Blog / Highlights
                 </div>
               </div>
-              <div className="md:w-3/4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="box h-64 bg-white rounded-md	"></div>
-                  <div className="box h-64 bg-white rounded-md	"></div>
-                  <div className="box h-64 bg-white rounded-md	"></div>
-                  <div className="box h-64 bg-white rounded-md	"></div>
-                </div>
+            </div>
+
+            {/* Right Panel - Cards */}
+            <div className="lg:w-3/4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="box h-64 bg-white rounded-md shadow-lg"></div>
+                <div className="box h-64 bg-white rounded-md shadow-lg"></div>
+                <div className="box h-64 bg-white rounded-md shadow-lg"></div>
+                <div className="box h-64 bg-white rounded-md shadow-lg"></div>
               </div>
             </div>
           </div>

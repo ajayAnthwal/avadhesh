@@ -1,20 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "../../css/slider.css";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import Image from 'next/image';
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Image from "next/image";
 
 const RotateBox = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
       content:
-        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth ",
+        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth",
     },
     {
       content:
-        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth ",
+        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth",
     },
   ];
 
@@ -41,7 +41,7 @@ const RotateBox = () => {
     <>
       <img src="./Vector (2).png" alt="img" className="w-full" />
       <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
-        <div className="container-cards text-center w-full   px-4-5 mx-auto py-8">
+        <div className="container-cards text-center w-full px-4-5 mx-auto py-8">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
             CFaaS
           </h1>
@@ -50,7 +50,9 @@ const RotateBox = () => {
             <br />
             Your Partner-in-Growth
           </p>
-          <div className="relative border border-black">
+
+          {/* The slider container with custom styles for 1920px screen width */}
+          <div className="relative border border-black w-full 2xl:w-[80%] 2xl:mx-auto">
             <div className="slider slider-container overflow-hidden relative w-full h-full">
               <div
                 className="slider-content flex transition-transform duration-500"
@@ -64,7 +66,7 @@ const RotateBox = () => {
                     key={index}
                   >
                     <div className="flex-none">
-                    <Image src="/Rectangle.png" alt="" width={250} height={200} />
+                      <Image src="/Rectangle.png" alt="" width={250} height={200} />
                     </div>
                     <div className="flex-grow text-center">
                       <h3 className="text-xl text-res">{slide.content}</h3>
@@ -77,13 +79,13 @@ const RotateBox = () => {
                 className="prev absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-2 py-1"
                 onClick={prevSlide}
               >
-                <MdKeyboardArrowLeft color="white" size={50}/>
+                <MdKeyboardArrowLeft color="white" size={50} />
               </button>
               <button
-                className="next absolute top-1/2 right-2 transform -translate-y-1/2  text-white px-2 py-1"
+                className="next absolute top-1/2 right-2 transform -translate-y-1/2 text-white px-2 py-1"
                 onClick={nextSlide}
               >
-                <MdKeyboardArrowRight color="white" size={50}/>
+                <MdKeyboardArrowRight color="white" size={50} />
               </button>
 
               <div className="dots absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -100,6 +102,7 @@ const RotateBox = () => {
             </div>
           </div>
         </div>
+
         <div className="container">
           <div className="text-center mb-4 schedule">
             <h1 className="text-center about-title text-4xl font-bold mb-4">
