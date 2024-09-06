@@ -4,7 +4,7 @@ import "../../css/slider.css";
 const HomePage = () => {
   return (
     <>
-      <div className="container mx-auto my-6 px-4-5">
+      <div className="container mx-auto my-6 px-4-5 mt-10">
         <div className="flex flex-col md:flex-row gap-6 justify-between">
           <div
             className="flex justify-center items-center md:justify-start w-full md:w-1/2 video-play"
