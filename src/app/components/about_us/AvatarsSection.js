@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const AvatarsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [maxToShow, setMaxToShow] = useState(1);
 
   const avatars = [
     { id: 1, content: "image 1" },
@@ -14,7 +15,21 @@ const AvatarsSection = () => {
     { id: 6, content: "image 6" },
   ];
 
-  const maxToShow = window.innerWidth >= 640 ? 3 : 1;
+  useEffect(() => {
+    const handleResize = () => {
+      setMaxToShow(window.innerWidth >= 640 ? 3 : 1);
+    };
+
+    // Set the initial value
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const totalAvatars = avatars.length;
 
   const goToNext = () => {
