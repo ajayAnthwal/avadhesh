@@ -59,7 +59,7 @@ export default function Header() {
           <Link href="/insights" className="hover:text-gray-900">
             Insights
           </Link>
-          <Link href="/careers" className="hover:text-gray-900">
+          <Link href="/hr" className="hover:text-gray-900">
             Careers
           </Link>
           <Link href="/about" className="hover:text-gray-900">
@@ -102,7 +102,7 @@ export default function Header() {
         <Link href="/insights" className="block hover:text-gray-900">
           Insights
         </Link>
-        <Link href="/careers" className="block hover:text-gray-900">
+        <Link href="/hr" className="block hover:text-gray-900">
           Careers
         </Link>
         <Link href="/about" className="block hover:text-gray-900">
