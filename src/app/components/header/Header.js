@@ -10,6 +10,10 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-md">
       <div className="flex items-center justify-between py-4 px-6 header-res">
@@ -93,22 +97,46 @@ export default function Header() {
           isOpen ? "block res-nav" : "hidden"
         } md:hidden bg-white text-sm font-medium text-gray-700 space-y-2 px-6 py-4 shadow-md`}
       >
-        <Link href="/" className="block hover:text-gray-900">
+        <Link
+          href="/"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           Home
         </Link>
-        <Link href="/what-we-do" className="block hover:text-gray-900">
+        <Link
+          href="/what-we-do"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           What we do
         </Link>
-        <Link href="/insights" className="block hover:text-gray-900">
+        <Link
+          href="/insights"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           Insights
         </Link>
-        <Link href="/hr" className="block hover:text-gray-900">
+        <Link
+          href="/hr"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           Careers
         </Link>
-        <Link href="/about" className="block hover:text-gray-900">
+        <Link
+          href="/about"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           About
         </Link>
-        <Link href="/contact" className="block hover:text-gray-900">
+        <Link
+          href="/contact"
+          className="block hover:text-gray-900"
+          onClick={closeMenu}
+        >
           Contact Us
         </Link>
         <div className="block text-gray-700 hover:text-gray-900">

@@ -18,7 +18,7 @@ const Industries = () => {
           {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
             <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
               Button
             </button>
           </div>
@@ -26,7 +26,7 @@ const Industries = () => {
           {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
             <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
               Button
             </button>
           </div>
@@ -34,7 +34,7 @@ const Industries = () => {
           {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
             <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom mt-4 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
+            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
               Button
             </button>
           </div>

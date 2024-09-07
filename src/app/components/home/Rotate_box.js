@@ -40,19 +40,29 @@ const RotateBox = () => {
   return (
     <>
       <img src="./Vector (2).png" alt="img" className="w-full" />
-      <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
-        <div className="container-cards text-center w-full px-4-5 mx-auto py-8">
+      <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] relative">
+        <div className="container-cards text-center w-full px-4-5 mx-auto py-8 relative">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
             CFaaS
           </h1>
           <p className="text-center text-lg mb-8">
-            Worlds first and only Corporate Functions as a Service company.
+            World first and only Corporate Functions as a Service company.
             <br />
             Your Partner-in-Growth
           </p>
 
-          {/* The slider container with responsive width */}
+          {/* The slider container with rotated image */}
           <div className="relative border border-black w-full max-w-screen-xl mx-auto">
+            <div className="absolute -top-16 left-4 rotate-img-container z-10">
+              <Image
+                src="/Rectangle.png"
+                alt="Rotated Box"
+                width={200}
+                height={200}
+                className="rotate-img"
+              />
+            </div>
+
             <div className="slider slider-container overflow-hidden relative w-full h-full">
               <div
                 className="slider-content flex transition-transform duration-500"
@@ -62,13 +72,14 @@ const RotateBox = () => {
               >
                 {slides.map((slide, index) => (
                   <div
-                    className="slide flex justify-around w-full h-full rotate-cards"
+                    className="slide flex justify-between w-full h-full"
                     key={index}
                   >
-                    <div className="flex-none">
-                      <Image src="/Rectangle.png" alt="" width={250} height={200} />
-                    </div>
-                    <div className="flex-grow text-center">
+                    <div
+                      className={`slide-content flex-grow rotate-cards ${
+                        index === 1 ? "second-slide-text" : ""
+                      }`}
+                    >
                       <h3 className="text-xl text-res">{slide.content}</h3>
                     </div>
                   </div>
@@ -104,22 +115,23 @@ const RotateBox = () => {
         </div>
 
         <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl">
-  <div className="text-center mb-12 max-w-4xl">
-    <h1 className="text-center about-title text-4xl font-bold mb-6">
-      Have Questions?
-    </h1>
-    <button className="btn-gray-call mb-4">Schedule a call with us</button>
-    <p className="paragraph">
-      <a
-        href="#"
-        className="text-dark text-decoration-underline call-paragraph"
-      >
-        Click on the FAQs page to know more about how we can help you?
-      </a>
-    </p>
-  </div>
-</div>
-
+          <div className="text-center mb-12 max-w-4xl">
+            <h1 className="text-center about-title text-4xl font-bold mb-6">
+              Have Questions?
+            </h1>
+            <button className="btn-gray-call mb-4">
+              Schedule a call with us
+            </button>
+            <p className="paragraph">
+              <a
+                href="#"
+                className="text-dark text-decoration-underline call-paragraph"
+              >
+                Click on the FAQs page to know more about how we can help you?
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

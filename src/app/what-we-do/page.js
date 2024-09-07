@@ -6,7 +6,7 @@ import Marketing_insights from "@/app/components/what_we_do/Marketing_insights";
 const What_we_do = () => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center gap-x-10 bg-white res-desktop w-[90%] m-auto mt-5">
+      <div className="flex flex-col lg:flex-row items-center gap-x-10 bg-white res-desktop w-[90%] m-auto mt-12">
         {/* Left Section */}
         <div className="space-y-2 w-full lg:w-96 mb-5 lg:mb-0">
           <h2 className="text-2xl font-bold text-black">
@@ -21,7 +21,7 @@ const What_we_do = () => {
             offering
           </p>
           <div className="mt-9">
-            <button className="btn-gray btn-res"></button>
+            <button className="btn-gray btn-res btn-offer"></button>
           </div>
         </div>
 
