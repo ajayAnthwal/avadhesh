@@ -1,16 +1,16 @@
 import React from "react";
 import Marketing from "@/app/components/what_we_do/Marketing";
-import MarketingServices from "@/app/components/what_we_do/MarketingServices";
-import Marketing_insights from "@/app/components/what_we_do/Marketing_insights";
+import HrStaffingWellBeing from "@/app/components/hr_career/HrStaffingWellBeing";
+import Hr_insights from '@/app/components/hr_career/Hr_insights';
 
-const What_we_do = () => {
+const Hr = () => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row items-center gap-x-10 bg-white res-desktop w-[90%] m-auto mt-5">
         {/* Left Section */}
         <div className="space-y-2 w-full lg:w-96 mb-5 lg:mb-0">
           <h2 className="text-2xl font-bold text-black">
-            Marketing & Lead Gen
+            HR, Staffing & Well Being​
           </h2>
           <p className="text-black">as a service</p>
           <p className="text-gray-500 text-sm">
@@ -45,10 +45,10 @@ const What_we_do = () => {
         </div>
       </div>
       <Marketing />
-      <MarketingServices />
-      <Marketing_insights />
+      <HrStaffingWellBeing />
+      <Hr_insights />
     </div>
   );
 };
 
-export default What_we_do;
+export default Hr;

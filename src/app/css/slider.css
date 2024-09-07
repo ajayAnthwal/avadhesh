@@ -203,9 +203,17 @@ footer .bi:hover {
 margin-left: 64px;
 }
 
+.bottom-service{
+width: 29%;
+}
+
 /* footer end  */
 
 @media screen and (max-width: 767px) {
+
+  .bottom-service{
+    width: 90%;
+  }
 
   .IndustriesServed{
     margin-left: 15px;
@@ -319,4 +327,9 @@ margin-left: 64px;
   .res-ebook{
     width: 90%;
   }
+
+  .marketing{
+    width: 91%;
+  }
+  
 }

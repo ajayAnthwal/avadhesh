@@ -1,14 +1,19 @@
 import React from "react";
+import "../../css/slider.css";
 
 const Marketing = () => {
   return (
-    <div>
-      <section className="flex flex-col items-center justify-center p-8 bg-white res-desktop px-4-5">
-        <div className="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center w-full container">
-          <div className="bg-white h-56 w-full md:w-1/3 rounded-lg border border-gray-300 mb-4 md:mb-0 md:mr-6"></div>
+    <div className="mt-9">
+      <img src="./Vector (1).png" alt="img" className="w-full" />
+      <section className="flex flex-col items-center justify-center p-8  bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] res-desktop px-4-5 ">
+        <div
+          className="p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center w-full container marketing"
+          style={{ backgroundColor: "#D9D9D9" }}
+        >
+          <div className=" h-56 w-full md:w-1/3 rounded-lg border border-gray-300 mb-4 md:mb-0 md:mr-6 bg-white"></div>
           <div className="flex flex-col justify-between w-full md:w-2/3">
             <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            Wondering what all we do in CFaaS?
+              Wondering what all we do in CFaaS?
             </h3>
             <p className="text-black mb-4 text-sm md:text-base">
               Lorem Ipsum is simply dummy text of the printing and typesetting
