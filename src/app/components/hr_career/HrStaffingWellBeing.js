@@ -1,4 +1,5 @@
 import React from "react";
+import '../../css/slider.css';
 
 const services = [
   {
@@ -74,7 +75,7 @@ const HrStaffingWellBeing = () => {
       </div>
 
       {/* Bottom Grid with 2 Boxes */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mt-6 bottom-service-hr">
         {services.slice(3, 5).map((service, index) => (
           <div
             key={index}

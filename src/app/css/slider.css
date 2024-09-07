@@ -207,9 +207,17 @@ margin-left: 64px;
 width: 29%;
 }
 
+.bottom-service-hr{
+  width: 60%;
+}
+
 /* footer end  */
 
 @media screen and (max-width: 767px) {
+
+  .bottom-service-hr{
+    width: 90%;
+  }
 
   .bottom-service{
     width: 90%;

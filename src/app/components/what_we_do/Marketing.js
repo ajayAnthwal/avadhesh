@@ -24,11 +24,10 @@ const Marketing = () => {
             <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
-                placeholder="Enter your email"
                 className="p-2 rounded-md w-full md:w-2/3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
-              <button className="bg-black rounded-md text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                Subscribe
+              <button className="bg-black rounded-3xl text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+              Get Your Copy
               </button>
             </div>
           </div>
