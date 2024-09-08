@@ -56,7 +56,9 @@ export default function FAQ() {
                   )}
                 </button>
                 {activeIndex === index && (
-                  <div className="px-4 pb-4 text-gray-600">{faq.answer}</div>
+                  <div className="px-4 pb-4 text-gray-600 text-left bg-white py-8">
+                    {faq.answer}
+                  </div>
                 )}
               </div>
             ))}
