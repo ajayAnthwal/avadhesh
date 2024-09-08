@@ -1,30 +1,42 @@
-"use client";
-import { useState } from "react";
+"use client"; // Ensures this component is client-side
+
+import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
+  const router = useRouter();
+  const pathname = usePathname(); // Get current pathname
 
+  // Toggle mobile menu
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle mobile menu
+    setIsOpen(!isOpen);
   };
 
+  // Toggle dropdown
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown on click
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Close mobile menu and dropdown
   const closeMenu = () => {
-    setIsOpen(false); // Close mobile menu
-    setIsDropdownOpen(false); // Close dropdown when mobile menu closes
+    setIsOpen(false);
+    setIsDropdownOpen(false);
   };
+
+  useEffect(() => {
+    // Close menu on pathname change
+    closeMenu();
+  }, [pathname]);
 
   return (
     <header className="bg-white shadow-md">
       <nav className="bg-white border-gray-200 dark:border-gray-600">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <Link
-            href="/home"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse lg:-ml-10 -ml-0"
           >
             <img src="/image_1.png" className="h-8" alt="Logo" />
@@ -39,7 +51,7 @@ export default function Header() {
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="mega-menu-full-cta"
-            aria-expanded="false"
+            aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -143,8 +155,9 @@ export default function Header() {
             className="mt-1 bg-gray-200 border-gray-200 shadow-sm border-y"
           >
             <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-black md:grid-cols-3 md:px-6">
+              {/* Mobile Dropdown Column */}
               <ul
-                className="space-y-4 sm:mb-4 md:mb-0"
+                className="space-y-4 sm:mb-4 md:mb-0 md:hidden" // Hide on medium screens and above
                 aria-labelledby="mega-menu-full-cta-button"
               >
                 <li>
@@ -168,7 +181,90 @@ export default function Header() {
                     href="#"
                     className="hover:underline hover:text-blue-600"
                   >
-                    Legal as a services
+                    Legal as a service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Customer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Marketing & Lead Gen
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    IT Support & Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Corporate gifting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    CFO-as-a-service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Procurement
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Market Research
+                  </Link>
+                </li>
+              </ul>
+              {/* Desktop Dropdown Columns */}
+              <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Consulting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    HR, Staffing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Legal as a service
                   </Link>
                 </li>
                 <li>
