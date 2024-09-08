@@ -263,6 +263,12 @@ footer .bi:hover {
 }
 
 @media screen and (max-width: 767px) {
+
+  .footer-second-container {
+    margin-left: 1%;
+  }
+  
+
   .footer-third-container {
     margin-left: 11%;
   }

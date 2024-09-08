@@ -69,12 +69,12 @@ const MarketingServices = () => {
           }}
           >
             <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
-              <div className="flex flex-col justify-between items-center h-56 py-6">
-                <h3 className="text-xl font-bold text-white">
+              <div className="flex flex-col justify-between h-56 py-6">
+                <h3 className="text-xl font-bold text-white ml-5">
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-sm text-white text-center">
+                  <p className="text-sm text-white text-left">
                     {service.description}
                   </p>
                 </div>
@@ -93,15 +93,15 @@ const MarketingServices = () => {
           }}
           >
           <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
-            <div className="flex flex-col justify-between items-center h-64  py-6">
-              <h3 className="text-xl font-bold text-white mt-4">
+            <div className="flex flex-col justify-between  h-64  py-6">
+              <h3 className="text-xl font-bold text-white mt-4 ml-5">
                 {services[6].title}
               </h3>
-              <div className="">
-                <p className="text-sm text-white text-center">
-                  {services[6].description}
-                </p>
-              </div>
+              <div className="px-5">
+                  <p className="text-sm text-white text-left">
+                    {services[6].description}
+                  </p>
+                </div>
             </div>
           </div>
         </div>

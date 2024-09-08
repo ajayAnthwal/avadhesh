@@ -3,9 +3,9 @@ import "../../css/slider.css";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto py-8  px-4-5">
-      <div className="flex justify-center w-full gap-9 footer footer-container-left">
-        <div className="w-1/3 footer-container">
+    <div className="container mx-auto py-8 px-4 sm:px-5">
+      <div className="flex flex-col md:flex-row justify-center w-full gap-9">
+        <div className="w-full md:w-1/3 p-4">
           <h6 className="text-lg font-semibold mb-2">Reach us</h6>
           <p className="flex items-start mb-2">
             <img
@@ -28,7 +28,7 @@ const Footer = () => {
             hello@avadhesh.co
           </p>
         </div>
-        <div className="w-1/3 footer-container footer-second-container">
+        <div className="w-full md:w-1/3 p-4">
           <h6 className="text-lg font-semibold mb-2">Insights</h6>
           <ul className="list-none space-y-2">
             <li>
@@ -58,7 +58,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/3 footer-container footer-third-container">
+        <div className="w-full md:w-1/3 p-4">
           <h6 className="text-lg font-semibold mb-2">Info</h6>
           <ul className="list-none space-y-2">
             <li>
@@ -74,7 +74,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      {/* <hr className="my-6 border-gray-300" /> */}
       <div className="text-center mt-9 mb-5">
         <b className="text-lg">Let’s get social</b>
         <br />

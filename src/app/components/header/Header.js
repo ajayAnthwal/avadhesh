@@ -1,160 +1,242 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for mobile menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Toggle mobile menu
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown on click
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
+    setIsOpen(false); // Close mobile menu
+    setIsDropdownOpen(false); // Close dropdown when mobile menu closes
   };
 
   return (
     <header className="bg-white shadow-md">
-      <div className="flex items-center justify-between py-4 px-6 header-res">
-        {/* Logo Section */}
-        <div className="flex items-center">
-          <Image
-            src="/image_1.png"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="mr-2"
-          />
-          <span className="text-xl font-semibold">Avadhesh</span>
-        </div>
+      <nav className="bg-white border-gray-200 dark:border-gray-600">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <Link
+            href="/home"
+            className="flex items-center space-x-3 rtl:space-x-reverse lg:-ml-10 -ml-0"
+          >
+            <img src="/image_1.png" className="h-8" alt="Logo" />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
+              Avadhesh
+            </span>
+          </Link>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+            data-collapse-toggle="mega-menu-full-cta"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="mega-menu-full-cta"
+            aria-expanded="false"
           >
+            <span className="sr-only">Open main menu</span>
             <svg
+              className="w-5 h-5"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
               fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+              viewBox="0 0 17 14"
             >
               <path
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M4 6h16M4 12h16m-7 6h7"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
           </button>
-        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
-          <Link href="/" className="hover:text-gray-900">
-            Home
-          </Link>
-          <Link href="/what-we-do" className="hover:text-gray-900">
-            What we do
-          </Link>
-          <Link href="/insights" className="hover:text-gray-900">
-            Insights
-          </Link>
-          <Link href="/hr" className="hover:text-gray-900">
-            Careers
-          </Link>
-          <Link href="/about" className="hover:text-gray-900">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-gray-900">
-            Contact Us
-          </Link>
-          <div className="text-gray-700 hover:text-gray-900">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </div>
-        </nav>
-      </div>
-
-      {/* Mobile Navigation */}
-      <nav
-        className={`${
-          isOpen ? "block res-nav" : "hidden"
-        } md:hidden bg-white text-sm font-medium text-gray-700 space-y-2 px-6 py-4 shadow-md`}
-      >
-        <Link
-          href="/"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          Home
-        </Link>
-        <Link
-          href="/what-we-do"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          What we do
-        </Link>
-        <Link
-          href="/insights"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          Insights
-        </Link>
-        <Link
-          href="/hr"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          Careers
-        </Link>
-        <Link
-          href="/about"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          About
-        </Link>
-        <Link
-          href="/contact"
-          className="block hover:text-gray-900"
-          onClick={closeMenu}
-        >
-          Contact Us
-        </Link>
-        <div className="block text-gray-700 hover:text-gray-900">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+          <div
+            id="mega-menu-full-cta"
+            className={`${
+              isOpen ? "block" : "hidden"
+            } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+            <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+              <li>
+                <Link
+                  href="/"
+                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="flex gap-1 items-center">
+                <Link
+                  href="/what-we-do"
+                  className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
+                >
+                  What we do
+                </Link>
+                <svg
+                  onClick={toggleDropdown}
+                  className="w-2.5 h-2.5 ms-3 cursor-pointer"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </li>
+
+              <li>
+                <Link
+                  href="/insights"
+                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hr"
+                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/contact"
+                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        {/* Dropdown section */}
+        {isDropdownOpen && (
+          <div
+            id="mega-menu-full-cta-dropdown"
+            className="mt-1 bg-gray-200 border-gray-200 shadow-sm border-y"
+          >
+            <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-black md:grid-cols-3 md:px-6">
+              <ul
+                className="space-y-4 sm:mb-4 md:mb-0"
+                aria-labelledby="mega-menu-full-cta-button"
+              >
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Consulting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    HR, Staffing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Legal as a services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Customer
+                  </Link>
+                </li>
+              </ul>
+              <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Marketing & Lead Gen
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    IT Support & Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:underline hover:text-blue-600"
+                  >
+                    Corporate gifting
+                  </Link>
+                </li>
+              </ul>
+              <div className="mt-4 md:mt-0">
+                <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
+                  <li>
+                    <Link
+                      href="#"
+                      className="hover:underline hover:text-blue-600"
+                    >
+                      CFO-as-a-service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="hover:underline hover:text-blue-600"
+                    >
+                      Procurement
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="hover:underline hover:text-blue-600"
+                    >
+                      Market Research
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

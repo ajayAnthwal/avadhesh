@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/slider.css';
+import "../../css/slider.css";
 
 const services = [
   {
@@ -59,12 +59,12 @@ const HrStaffingWellBeing = () => {
             }}
           >
             <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
-              <div className="flex flex-col justify-between items-center h-56 py-6">
-                <h3 className="text-xl font-bold text-white">
+              <div className="flex flex-col justify-between  h-56 py-6">
+                <h3 className="text-xl font-bold text-white ml-5">
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-sm text-white text-center">
+                  <p className="text-sm text-white text-left">
                     {service.description}
                   </p>
                 </div>
@@ -87,12 +87,12 @@ const HrStaffingWellBeing = () => {
             }}
           >
             <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
-              <div className="flex flex-col justify-between items-center h-56 py-6">
-                <h3 className="text-xl font-bold text-white">
+              <div className="flex flex-col justify-between  h-56 py-6">
+                <h3 className="text-xl font-bold text-white ml-5">
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-sm text-white text-center">
+                  <p className="text-sm text-white text-left">
                     {service.description}
                   </p>
                 </div>
