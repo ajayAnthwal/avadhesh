@@ -47,7 +47,9 @@ const services = [
 
 const MarketingServices = () => {
   return (
-    <div className="py-10 res-desktop">
+    <div className="flex justify-center mt-10">
+
+    <div className="container">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold">Our Marketing Services</h2>
         <p className="text-gray-500">
@@ -58,13 +60,13 @@ const MarketingServices = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[90%] mx-auto">
         {services.slice(0, 6).map((service, index) => (
           <div
-            key={index}
-            className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
-            style={{
-              backgroundImage: `url(${service.imageUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+          key={index}
+          className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
+          style={{
+            backgroundImage: `url(${service.imageUrl})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
           >
             <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
               <div className="flex flex-col justify-between items-center h-56 py-6">
@@ -89,7 +91,7 @@ const MarketingServices = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        >
+          >
           <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
             <div className="flex flex-col justify-between items-center h-64  py-6">
               <h3 className="text-xl font-bold text-white mt-4">
@@ -105,6 +107,7 @@ const MarketingServices = () => {
         </div>
       </div>
     </div>
+          </div>
   );
 };
 

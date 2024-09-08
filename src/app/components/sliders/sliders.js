@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import '../../css/slider.css';
+import "../../css/slider.css";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
 
 const Sliders = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,27 +39,30 @@ const Sliders = () => {
   return (
     <div>
       <div className="slider">
-        <div
-          className="slider-content"
-          style={{
-            transform: `translateX(-${currentSlide * 100}%)`,
-          }}
-        >
-          {slides.map((slide, index) => (
-            <div className="slide" key={index}>
-              <div className="d-flex flex-column">
-                <h3 className="w-241 mb-20">{slide.content}</h3>
-                <button className="btn-gray btn-res">{slide.buttonText}</button>
+        <div className="container m-auto">
+          <div
+            className="slider-content"
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+            }}
+          >
+            {slides.map((slide, index) => (
+              <div className="slide-text" key={index}>
+                <div className="d-flex flex-column">
+                  <h3 className="w-241 mb-20">{slide.content}</h3>
+                  <button className="btn-gray btn-res">
+                    {slide.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
         <button className="prev" onClick={prevSlide}>
-        <MdKeyboardArrowLeft />
+          <MdKeyboardArrowLeft />
         </button>
         <button className="next" onClick={nextSlide}>
-        <MdKeyboardArrowRight />
+          <MdKeyboardArrowRight />
         </button>
 
         <div className="dots">

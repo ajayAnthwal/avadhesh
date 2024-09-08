@@ -8,7 +8,7 @@ export default function Contact() {
     <div>
       <Sliders />
 
-      <div className="bg-gray-50 min-h-screen flex flex-col justify-between">
+      <div className="bg-gray-50 flex flex-col justify-between">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -163,8 +163,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      <div className="mt-7 px-4-5">
+      
+      <div className="mt-7">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220409.6832235383!2d77.85232418505264!3d30.325325143216006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1725541674325!5m2!1sen!2sin"
           width="100%"
@@ -173,7 +173,7 @@ export default function Contact() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="res-desktop"
+         
         ></iframe>
       </div>
       <div className="mt-5">

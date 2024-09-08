@@ -32,6 +32,14 @@
   color: #000;
   font-size: 18px;
 }
+.slide-text {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 3%;
+  color: #000;
+  font-size: 18px;
+}
 
 .slider button {
   color: #ccc;
@@ -250,7 +258,18 @@ footer .bi:hover {
   width: 80%;
 }
 
+.footer-second-container {
+  margin-left: 11%;
+}
+
 @media screen and (max-width: 767px) {
+  .footer-third-container {
+    margin-left: 11%;
+  }
+
+  .slider-content {
+    width: 91%;
+  }
   .btn-offer {
     margin-left: 1px !important;
     margin-top: 20px;

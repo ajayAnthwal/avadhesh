@@ -28,7 +28,7 @@ const Footer = () => {
             hello@avadhesh.co
           </p>
         </div>
-        <div className="w-1/3 footer-container">
+        <div className="w-1/3 footer-container footer-second-container">
           <h6 className="text-lg font-semibold mb-2">Insights</h6>
           <ul className="list-none space-y-2">
             <li>
@@ -58,7 +58,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/3 footer-container">
+        <div className="w-1/3 footer-container footer-third-container">
           <h6 className="text-lg font-semibold mb-2">Info</h6>
           <ul className="list-none space-y-2">
             <li>

@@ -41,16 +41,17 @@ const About = () => {
         </div>
       </div>
       {/* section  */}
-
+      <div className="w-full">
       <img src="./Vector (2).png" alt="img" className="w-full" />
       <div className="w-full  px-4-5 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
-        <div className="text-center w-full mx-auto py-8">
+    <div className="container m-auto">
+        <div className="text-center w-full mx-auto">
           <h2 className="text-center text-2xl font-bold mb-4">
             Lorem Ipsum is simply dummy text of the <br />
             printing and typesetting industry. 
           </h2>
-          <div className="mx-auto ">
-            <div className="flex flex-col md:flex-row gap-6 justify-between res-desktop">
+          <div className="mx-auto mt-12">
+            <div className="flex flex-col md:flex-row gap-6 justify-between ">
               <div
                 className="flex justify-center items-center md:justify-start w-full md:w-1/2 video-play"
                 style={{ backgroundColor: "#D9D9D9" }}
@@ -107,6 +108,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      </div>
 
       <Team />
       <AvatarsSection />
@@ -129,6 +131,7 @@ const About = () => {
         </div>
       </div>
       <hr />
+    </div>
     </div>
   );
 };

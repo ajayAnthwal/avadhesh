@@ -1,6 +1,10 @@
 export default function EbookSection() {
   return (
-    <section className="flex flex-col items-center justify-center p-8 bg-white res-desktop px-4-5">
+    <div className="w-full">
+
+    <div className="container m-auto">
+
+    <section className="flex flex-col items-center justify-center p-8 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-black mb-2">Trends E-books</h2>
         <p className="text-gray-500">
@@ -25,7 +29,7 @@ export default function EbookSection() {
               type="text"
               placeholder="Enter your email"
               className="p-2 rounded-md w-full md:w-2/3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            />
+              />
             <button className="bg-black rounded-md text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500">
               Subscribe
             </button>
@@ -33,5 +37,7 @@ export default function EbookSection() {
         </div>
       </div>
     </section>
+              </div>
+              </div>
   );
 }

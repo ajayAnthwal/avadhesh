@@ -9,7 +9,7 @@ const Insights = () => {
   return (
     <div>
       <Sliders />
-      <div className=" flex items-center justify-center bg-white res-desktop">
+      <div className=" flex items-center justify-center bg-white m-auto container">
         <div className="w-full px-4-5 mt-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold">What we do</h2>

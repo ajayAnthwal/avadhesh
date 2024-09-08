@@ -21,15 +21,10 @@ const Marketing = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <div className="flex flex-col md:flex-row gap-4">
-              <input
-                type="text"
-                className="p-2 rounded-md w-full md:w-2/3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-              <button className="bg-black rounded-3xl text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+           
+            <button className="bg-black rounded-3xl text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 w-56">
               Get Your Copy
               </button>
-            </div>
           </div>
         </div>
       </section>
