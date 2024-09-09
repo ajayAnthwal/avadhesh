@@ -1,15 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import '../../css/slider.css';
+import "../../css/slider.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
   const router = useRouter();
   const pathname = usePathname(); // Get current pathname
+  const dropdownRef = useRef(null); // Ref for dropdown menu
 
   // Toggle mobile menu
   const toggleMenu = () => {
@@ -39,6 +40,18 @@ export default function Header() {
     closeMenu();
     window.scrollTo(0, 0); // Reset scroll position to top after navigation
   }, [pathname]);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside of it
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="bg-white shadow-md">
@@ -122,91 +135,91 @@ export default function Header() {
 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className="menu-drop-res">
-                  <ul className="absolute left-0 z-10 mt-2 bg-gray-200 border-gray-200 shadow-sm p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-max">
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Consulting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Marketing & Lead Gen
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        CFO-as-a-service  
-                      </Link>
-                    </li>
+                  <div className="menu-drop-res" ref={dropdownRef}>
+                    <ul className="absolute left-0 z-10 mt-2 bg-gray-200 border-gray-200 shadow-sm p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-max">
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Consulting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Marketing & Lead Gen
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          CFO-as-a-service  
+                        </Link>
+                      </li>
 
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        HR, Staffing
-                      </Link>
-                    </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          HR, Staffing
+                        </Link>
+                      </li>
 
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        IT Support & Management
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Procurement
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Legal as a services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Corporate gifting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Market Research
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#"
-                        className="block py-1 px-3 text-black hover:bg-gray-100"
-                      >
-                        Customer
-                      </Link>
-                    </li>
-                  </ul>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          IT Support & Management
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Procurement
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Legal as a services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Corporate gifting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Market Research
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                        >
+                          Customer
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
                 )}
               </li>
