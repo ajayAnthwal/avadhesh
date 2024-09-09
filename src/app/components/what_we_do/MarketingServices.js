@@ -57,7 +57,7 @@ const MarketingServices = () => {
           industry.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[90%] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto px-4-5">
         {services.slice(0, 6).map((service, index) => (
           <div
           key={index}

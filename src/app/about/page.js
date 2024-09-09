@@ -96,7 +96,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="flex mt-8 res-desktop">
+            <div className="flex mt-8 res-desktop py-6">
               <div className="border-l-4 border-black h-auto mr-4"></div>
               <blockquote>
                 Lorem Ipsum is simply dummy text of the printing and typesetting

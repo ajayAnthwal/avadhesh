@@ -3,7 +3,7 @@ import "../../css/slider.css";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto py-8 px-4 sm:px-5">
+    <div className="container mx-auto">
       <div className="flex flex-col md:flex-row justify-center w-full gap-9">
         <div className="w-full md:w-1/3 p-4">
           <h6 className="text-lg font-semibold mb-2">Reach us</h6>

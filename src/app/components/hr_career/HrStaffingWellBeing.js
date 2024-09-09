@@ -47,7 +47,7 @@ const HrStaffingWellBeing = () => {
       </div>
 
       {/* Upper Grid with 3 Boxes */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[90%] mx-auto container">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto container px-4-5">
         {services.slice(0, 3).map((service, index) => (
           <div
             key={index}
@@ -75,7 +75,7 @@ const HrStaffingWellBeing = () => {
       </div>
 
       {/* Bottom Grid with 2 Boxes */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] mx-auto mt-6 bottom-service-hr container">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[100%] mx-auto mt-6 bottom-service-hr container px-4-5">
         {services.slice(3, 5).map((service, index) => (
           <div
             key={index}

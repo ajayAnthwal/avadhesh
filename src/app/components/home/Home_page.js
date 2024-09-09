@@ -68,7 +68,7 @@ const HomePage = () => {
           {/* Flex container for the "Latest Highlight" section */}
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left Panel */}
-            <div className="lg:w-1/4 mb-4 lg:mb-0">
+            <div className="lg:w-1/3 mb-4 lg:mb-0">
               <div className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg">
                 <div className="content text-lg landing">
                   Landing / Blog / Highlights
