@@ -3,7 +3,8 @@ import "../../css/slider.css";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto">
+    <div className="w-full">
+    <div className="container mx-auto res-desktop px-4-5 w-[85%]">
       <div className="flex flex-col md:flex-row justify-center w-full gap-9">
         <div className="w-full md:w-1/3 p-4">
           <h6 className="text-lg font-semibold mb-2">Reach us</h6>
@@ -28,7 +29,7 @@ const Footer = () => {
             hello@avadhesh.co
           </p>
         </div>
-        <div className="w-full md:w-1/3 p-4">
+        <div className="w-full md:w-1/3 p-4 footer-second-container">
           <h6 className="text-lg font-semibold mb-2">Insights</h6>
           <ul className="list-none space-y-2">
             <li>
@@ -89,6 +90,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+    </div>
     </div>
   );
 };

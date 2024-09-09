@@ -1,8 +1,9 @@
-"use client"; // Ensures this component is client-side
+"use client";
 
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import '../../css/slider.css';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
@@ -13,10 +14,16 @@ export default function Header() {
   // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+    } else {
+      document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
+    }
   };
 
   // Toggle dropdown
-  const toggleDropdown = () => {
+  const toggleDropdown = (e) => {
+    e.preventDefault(); // Prevent any default action that might cause scrolling
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -24,11 +31,13 @@ export default function Header() {
   const closeMenu = () => {
     setIsOpen(false);
     setIsDropdownOpen(false);
+    document.body.style.overflow = ""; // Ensure scrolling is enabled after closing menu
   };
 
   useEffect(() => {
     // Close menu on pathname change
     closeMenu();
+    window.scrollTo(0, 0); // Reset scroll position to top after navigation
   }, [pathname]);
 
   return (
@@ -86,30 +95,120 @@ export default function Header() {
                   Home
                 </Link>
               </li>
-              
-              <li className="flex gap-1 items-center">
-                <Link
-                  href="/what-we-do"
+
+              <li className="relative">
+                <a
+                  href="#"
+                  onClick={toggleDropdown}
                   className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
                 >
                   What we do
-                </Link>
-                <svg
-                  onClick={toggleDropdown}
-                  className="w-2.5 h-2.5 ms-3 cursor-pointer"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
+                  <svg
+                    className="w-2.5 h-2.5 ms-3 cursor-pointer"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </a>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="menu-drop-res">
+                  <ul className="absolute left-0 z-10 mt-2 bg-gray-200 border-gray-200 shadow-sm p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-max">
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Consulting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Marketing & Lead Gen
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        CFO-as-a-service  
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        HR, Staffing
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        IT Support & Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Procurement
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Legal as a services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Corporate gifting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Market Research
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        className="block py-1 px-3 text-black hover:bg-gray-100"
+                      >
+                        Customer
+                      </Link>
+                    </li>
+                  </ul>
+                  </div>
+                )}
               </li>
 
               <li>
@@ -148,192 +247,6 @@ export default function Header() {
             </ul>
           </div>
         </div>
-
-        {/* Dropdown section */}
-        {isDropdownOpen && (
-          <div
-            id="mega-menu-full-cta-dropdown"
-            className="mt-1 bg-gray-200 border-gray-200 shadow-sm border-y"
-          >
-            <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-black md:grid-cols-3 md:px-6">
-              {/* Mobile Dropdown Column */}
-              <ul
-                className="space-y-4 sm:mb-4 md:mb-0 md:hidden" // Hide on medium screens and above
-                aria-labelledby="mega-menu-full-cta-button"
-              >
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Consulting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    HR, Staffing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Legal as a service
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Customer
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Marketing & Lead Gen
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    IT Support & Management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Corporate gifting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    CFO-as-a-service
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Procurement
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Market Research
-                  </Link>
-                </li>
-              </ul>
-              {/* Desktop Dropdown Columns */}
-              <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Consulting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    HR, Staffing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Legal as a service
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Customer
-                  </Link>
-                </li>
-              </ul>
-              <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Marketing & Lead Gen
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    IT Support & Management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:underline hover:text-blue-600"
-                  >
-                    Corporate gifting
-                  </Link>
-                </li>
-              </ul>
-              <div className="mt-4 md:mt-0">
-                <ul className="hidden mb-4 space-y-4 md:mb-0 sm:block">
-                  <li>
-                    <Link
-                      href="#"
-                      className="hover:underline hover:text-blue-600"
-                    >
-                      CFO-as-a-service
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="hover:underline hover:text-blue-600"
-                    >
-                      Procurement
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="hover:underline hover:text-blue-600"
-                    >
-                      Market Research
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
       </nav>
     </header>
   );

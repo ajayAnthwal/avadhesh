@@ -59,6 +59,11 @@
   right: 20px;
 }
 
+.menu-drop-res {
+  position: absolute;
+  left: -90%;
+}
+
 .dots {
   position: absolute;
   bottom: 10px;
@@ -263,6 +268,12 @@ footer .bi:hover {
 }
 
 @media screen and (max-width: 767px) {
+
+  .menu-drop-res {
+    position: absolute;
+    left: 0%;
+  }
+  
   .footer-second-container {
     margin-left: 1%;
   }
@@ -390,6 +401,8 @@ footer .bi:hover {
     padding-left: 15rem;
     padding-right: 15rem;
   }
+
+
 
   /* .res-desktop {
     padding-left: 15rem;
