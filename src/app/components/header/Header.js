@@ -110,9 +110,9 @@ export default function Header() {
               </li>
 
               <li className="relative">
-                <a
-                  href="#"
-                  onClick={toggleDropdown}
+                <Link
+                  href="/what-we-do"
+                 
                   className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
                 >
                   What we do
@@ -122,6 +122,7 @@ export default function Header() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 10 6"
+                    onClick={toggleDropdown}
                   >
                     <path
                       stroke="currentColor"
@@ -131,7 +132,7 @@ export default function Header() {
                       d="m1 1 4 4 4-4"
                     />
                   </svg>
-                </a>
+                </Link>
 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
