@@ -11,7 +11,7 @@ const Hr = () => {
           <div className="p-6 flex flex-col md:flex-row items-center w-full container marketing">
             <div className=" h-56 w-full md:w-1/3   mb-4 md:mb-0 md:mr-6 bg-white">
               <h2 className="text-2xl font-bold text-black">
-              HR, Staffing & Well Being​
+                HR, Staffing & Well Being​
               </h2>
               <p className="text-black">as a service</p>
               <p className="text-gray-500 text-sm">

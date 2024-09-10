@@ -1,19 +1,23 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "../../css/slider.css";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const Sliders = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
+      id: 1,
       content: "Lorem Ipsum is simply dummy text of the printing typesetting.",
-      buttonText: "",
+      buttonText: "Learn more",
+      backgroundImage: "/slider-images.jpg",
     },
     {
+      id: 2,
       content: "Lorem Ipsum is simply dummy text of the printing typesetting.",
-      buttonText: "",
+      buttonText: "Learn More",
+      backgroundImage: "/slider-images-2.png",
     },
   ];
 
@@ -37,43 +41,50 @@ const Sliders = () => {
   }, [currentSlide]);
 
   return (
-    <div>
-      <div className="slider">
-        <div className="container m-auto">
-          <div
-            className="slider-content"
-            style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
-            }}
-          >
-            {slides.map((slide, index) => (
-              <div className="slide-text" key={index}>
-                <div className="d-flex flex-column">
-                  <h3 className="w-241 mb-20">{slide.content}</h3>
-                  <button className="btn-gray btn-res">
-                    {slide.buttonText}
-                  </button>
-                </div>
+    <div className="slider">
+      {slides.map((slide, index) => (
+        <div
+          className="slider-content"
+          key={index}
+          style={{
+            opacity: currentSlide === index ? 1 : 0,
+            transform: `translateY(${currentSlide === index ? 0 : 50}px)`,
+            transition: "opacity 0.5s ease, transform 0.5s ease",
+            backgroundImage: `url(${slide.backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: "100%",
+            position: currentSlide === index ? "relative" : "absolute",
+          }}
+        >
+          <div className="container m-auto">
+            <div className="slide-text">
+              <div className="d-flex flex-column">
+                <h3 className="w-241 mb-20">{slide.content}</h3>
+                <button className="btn-gray btn-res text-xs">
+                  {slide.buttonText}
+                </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-        <button className="prev" onClick={prevSlide}>
-          <MdKeyboardArrowLeft />
-        </button>
-        <button className="next" onClick={nextSlide}>
-          <MdKeyboardArrowRight />
-        </button>
+      ))}
 
-        <div className="dots">
-          {slides.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentSlide ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          ))}
-        </div>
+      <button className="prev" onClick={prevSlide}>
+        <MdKeyboardArrowLeft />
+      </button>
+      <button className="next" onClick={nextSlide}>
+        <MdKeyboardArrowRight />
+      </button>
+
+      <div className="dots">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentSlide ? "active" : ""}`}
+            onClick={() => goToSlide(index)}
+          ></span>
+        ))}
       </div>
     </div>
   );

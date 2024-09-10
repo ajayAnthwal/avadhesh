@@ -1,10 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
 const Marketing_insights = () => {
   return (
     <div className="w-full">
       <div className="mt-7">
-        <img src="./Vector (2).png" alt="img" className="w-full" />
+        <Image
+          src="/Vector (2).png"
+          alt="img"
+          className="w-full"
+          width={100}
+          height={100}
+        />
         <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop">
           <div className="container mx-auto">
             <h1 className="text-center text-3xl font-bold mb-6">
@@ -19,22 +26,46 @@ const Marketing_insights = () => {
             <div className="flex justify-center px-4 w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-screen-xl">
                 <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4"></div>
-                  <button className="btn-custom -mt-7 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                    Button
-                  </button>
+                  <div className="h-44 bg-white rounded-md mb-4">
+                    <Image
+                      src="/developer.webp"
+                      alt="Developer"
+                      className="h-[177px] w-full object-cover"
+                      width={500}
+                      height={177}
+                    />
+                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                      Button
+                    </button>
+                  </div>
                 </div>
                 <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4"></div>
-                  <button className="btn-custom -mt-7 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                    Button
-                  </button>
+                  <div className="h-44 bg-white rounded-md mb-4">
+                    <Image
+                      src="/developer.webp"
+                      alt="Developer"
+                      className="h-[177px] w-full object-cover"
+                      width={500}
+                      height={177}
+                    />
+                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                      Button
+                    </button>
+                  </div>
                 </div>
                 <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4"></div>
-                  <button className="btn-custom -mt-7 flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-                    Button
-                  </button>
+                  <div className="h-44 bg-white rounded-md mb-4">
+                    <Image
+                      src="/developer.webp"
+                      alt="Developer"
+                      className="h-[177px] w-full object-cover"
+                      width={500}
+                      height={177}
+                    />
+                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                      Button
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

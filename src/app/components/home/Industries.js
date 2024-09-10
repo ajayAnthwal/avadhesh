@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Industries = () => {
   return (
@@ -12,31 +13,48 @@ const Industries = () => {
           <br />
           industry. Lorem Ipsum has been the industry standard.
         </p>
-
-        {/* Flex container for the industries */}
         <div className="flex flex-col lg:flex-row justify-center gap-6 w-full">
-          {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-              Button
-            </button>
+            <div className="h-44 bg-white rounded-md mb-4 relative">
+              <Image
+                src="/developer.webp"
+                alt="Developer"
+                className="h-[177px] w-full object-cover"
+                width={500}
+                height={177}
+              />
+              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                Button
+              </button>
+            </div>
           </div>
-
-          {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-              Button
-            </button>
+            <div className="h-44 bg-white rounded-md mb-4 relative">
+              <Image
+                src="/developer.webp"
+                alt="Developer"
+                className="h-[177px] w-full object-cover"
+                width={500}
+                height={177}
+              />
+              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                Button
+              </button>
+            </div>
           </div>
-
-          {/* Single Box */}
           <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4"></div>
-            <button className="btn-custom -mt-7  flex justify-center m-auto items-center bg-black hover:bg-gray-300 text-white py-2 px-4 rounded">
-              Button
-            </button>
+            <div className="h-44 bg-white rounded-md mb-4 relative">
+              <Image
+                src="/developer.webp"
+                alt="Developer"
+                className="h-[177px] w-full object-cover"
+                width={500}
+                height={177}
+              />
+              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
+                Button
+              </button>
+            </div>
           </div>
         </div>
       </div>

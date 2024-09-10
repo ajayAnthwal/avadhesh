@@ -1,18 +1,19 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import Image from "next/image";
 
 const AvatarsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [maxToShow, setMaxToShow] = useState(1);
 
   const avatars = [
-    { id: 1, content: "image 1" },
-    { id: 2, content: "image 2" },
-    { id: 3, content: "image 3" },
-    { id: 4, content: "image 4" },
-    { id: 5, content: "image 5" },
-    { id: 6, content: "image 6" },
+    { id: 1, img: "/developer.webp" },
+    { id: 2, img: "/developer.webp" },
+    { id: 3, img: "/developer.webp" },
+    { id: 4, img: "/" },
+    { id: 5, img: "/developer.webp" },
+    { id: 6, img: "/developer.webp" },
   ];
 
   useEffect(() => {
@@ -20,13 +21,8 @@ const AvatarsSection = () => {
       setMaxToShow(window.innerWidth >= 640 ? 3 : 1);
     };
 
-    // Set the initial value
     handleResize();
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -66,7 +62,13 @@ const AvatarsSection = () => {
                     key={avatar.id}
                     className="border border-black rounded-lg w-full h-96 bg-white flex items-center justify-center"
                   >
-                    {avatar.content}
+                    <Image
+                      src={avatar.img}
+                      alt="image 4"
+                      className="h-[350px] w-full object-cover"
+                      width={500}
+                      height={400}
+                    />
                   </div>
                 ))}
             </div>

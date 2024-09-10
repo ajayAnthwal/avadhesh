@@ -50,8 +50,6 @@ const RotateBox = () => {
             <br />
             Your Partner-in-Growth
           </p>
-
-          {/* The slider container with rotated image */}
           <div className="relative border border-black w-full max-w-screen-xl mx-auto">
             <div className="absolute -top-16 left-4 rotate-img-container z-10">
               <Image

@@ -9,19 +9,19 @@ export default function Contact() {
       <Sliders />
 
       <div className="bg-gray-50 flex flex-col justify-between">
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="max-w-[86rem] mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in touch with us</h2>
               <p className="text-gray-600 mb-8 text-justify">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard
-                dummy text ever since the 1500s.Lorem Ipsum is simply dummy text
-                of the printing and typesetting industry. Lorem Ipsum has been
-                the industry standard dummy text ever since the 1500s.
+                industry. Lorem Ipsum has been the industry standard dummy text
+                ever since the 1500s.Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry. Lorem Ipsum has been the
+                industry standard dummy text ever since the 1500s. Lorem Ipsum
+                is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
+                industry.
               </p>
 
               <div className="space-y-6">
@@ -64,8 +64,6 @@ export default function Contact() {
                 <hr />
               </div>
             </div>
-
-            {/* Right Section (Form) */}
             <div className="bg-white p-8 shadow-lg rounded-lg border border-black">
               <form>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -163,7 +161,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      
+
       <div className="mt-7">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220409.6832235383!2d77.85232418505264!3d30.325325143216006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1725541674325!5m2!1sen!2sin"
@@ -173,7 +171,6 @@ export default function Contact() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-         
         ></iframe>
       </div>
       <div className="mt-5">

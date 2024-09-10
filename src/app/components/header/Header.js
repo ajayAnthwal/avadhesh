@@ -6,25 +6,25 @@ import Link from "next/link";
 import "../../css/slider.css";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false); // State for mobile menu
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname(); // Get current pathname
-  const dropdownRef = useRef(null); // Ref for dropdown menu
+  const pathname = usePathname();
+  const dropdownRef = useRef(null);
 
   // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
-      document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
+      document.body.style.overflow = "";
     }
   };
 
   // Toggle dropdown
   const toggleDropdown = (e) => {
-    e.preventDefault(); // Prevent any default action that might cause scrolling
+    e.preventDefault();
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -32,17 +32,15 @@ export default function Header() {
   const closeMenu = () => {
     setIsOpen(false);
     setIsDropdownOpen(false);
-    document.body.style.overflow = ""; // Ensure scrolling is enabled after closing menu
+    document.body.style.overflow = "";
   };
 
   useEffect(() => {
-    // Close menu on pathname change
     closeMenu();
-    window.scrollTo(0, 0); // Reset scroll position to top after navigation
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   useEffect(() => {
-    // Close dropdown when clicking outside of it
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
@@ -112,7 +110,6 @@ export default function Header() {
               <li className="relative">
                 <Link
                   href="/what-we-do"
-                 
                   className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
                 >
                   What we do

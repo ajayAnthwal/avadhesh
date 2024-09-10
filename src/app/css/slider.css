@@ -36,14 +36,14 @@
   min-width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 3%;
+  padding-left: 7%;
   color: #000;
   font-size: 18px;
 }
 
 .slider button {
-  color: #ccc;
-  font-size: 30px;
+  color: #000000;
+  font-size: 15px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -236,7 +236,24 @@ footer .bi:hover {
 
 /* Slider container */
 .slider-content {
-  height: 200px;
+  height: 400px;
+  background-image: url("/slider-images1.jpg"), url("/slider-images2.jpg");
+  background-size: cover, cover; /* Adjust sizes as needed */
+  background-position: center center, center center; /* Adjust positions as needed */
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* Add to slider.css */
+.bg-slider-bg1 {
+  background-image: url("/slider-images1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-slider-bg2 {
+  background-image: url("/slider-images2.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Positioning buttons */
@@ -268,12 +285,11 @@ footer .bi:hover {
 }
 
 @media screen and (max-width: 767px) {
-
   .menu-drop-res {
     position: absolute;
     left: 0%;
   }
-  
+
   .footer-second-container {
     margin-left: 1%;
   }
@@ -401,8 +417,6 @@ footer .bi:hover {
     padding-left: 15rem;
     padding-right: 15rem;
   }
-
-
 
   /* .res-desktop {
     padding-left: 15rem;
