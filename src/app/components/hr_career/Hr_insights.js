@@ -5,17 +5,17 @@ import Image from "next/image";
 const Hr_insights = () => {
   const cards = [
     {
-      imgSrc: "/blog-1.png",
+      imgSrc: "/Blog-1.png",
       title: "Best Practices For HR Operations Management",
       description: "Are your HR Operations equipped for a hybrid work world?",
     },
     {
-      imgSrc: "/blog-2.png",
+      imgSrc: "/Blog-2.png",
       title: "Strategies For Attracting Top Talents",
       description: "Know about the winning strategies to attract the best of talents.",
     },
     {
-      imgSrc: "/blog-3.png",
+      imgSrc: "/Blog-3.png",
       title: "If You're An Entrepreneur, Learn To Manage Imposter Syndrome",
       description: "How your mindset impacts the company you're working on.",
     },
