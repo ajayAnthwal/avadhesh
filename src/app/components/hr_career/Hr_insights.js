@@ -1,73 +1,51 @@
 import React from "react";
+import BlogCard from "../blogCard/BlogCard";
 import Image from "next/image";
 
 const Hr_insights = () => {
+  const cards = [
+    {
+      imgSrc: "/blog-1.png",
+      title: "Best Practices For HR Operations Management",
+      description: "Are your HR Operations equipped for a hybrid work world?",
+    },
+    {
+      imgSrc: "/blog-2.png",
+      title: "Strategies For Attracting Top Talents",
+      description: "Know about the winning strategies to attract the best of talents.",
+    },
+    {
+      imgSrc: "/blog-3.png",
+      title: "If You're An Entrepreneur, Learn To Manage Imposter Syndrome",
+      description: "How your mindset impacts the company you're working on.",
+    },
+  ];
+
   return (
     <div className="w-full">
       <div className="mt-7">
         <img src="./Vector (2).png" alt="img" className="w-full" />
-        <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop">
+        <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
           <div className="container mx-auto">
             <h1 className="text-center text-3xl font-bold mb-6">
-              Recommended HR insights
+              Recommended HR Insights
             </h1>
             <p className="text-center text-lg mb-8">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              <br />
-              industry. Lorem Ipsum has been the industry standard.
+              Discover expert HR tips and insights in our <br /> blogs to elevate your workforce today!
             </p>
 
             <div className="flex justify-center px-4 w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-screen-xl">
-                <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4">
-                    <Image
-                      src="/developer.webp"
-                      alt="Developer"
-                      className="h-[177px] w-full object-cover"
-                      width={500}
-                      height={177}
-                    />
-                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                      Button
-                    </button>
-                  </div>
-                </div>
-                <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4">
-                    <Image
-                      src="/developer.webp"
-                      alt="Developer"
-                      className="h-[177px] w-full object-cover"
-                      width={500}
-                      height={177}
-                    />
-                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                      Button
-                    </button>
-                  </div>
-                </div>
-                <div className="bg-gray-300 shadow-lg rounded-lg p-6 h-96 box-third-container">
-                  <div className="h-44 bg-white rounded-md mb-4">
-                    <Image
-                      src="/developer.webp"
-                      alt="Developer"
-                      className="h-[177px] w-full object-cover"
-                      width={500}
-                      height={177}
-                    />
-                    <button className=" m-auto flex relative bottom-4 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                      Button
-                    </button>
-                  </div>
-                </div>
+                {cards.map((card, index) => (
+                  <BlogCard key={index} card={card} />
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl  bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+          <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
             <div className="text-center mb-12 max-w-4xl">
-              <h1 className="text-center about-title text-4xl font-bold mb-6">
+              <h1 className="text-center text-4xl font-bold mb-6">
                 Have Questions?
               </h1>
               <button className="btn-gray-call mb-4">

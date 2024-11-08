@@ -5,31 +5,31 @@ const services = [
   {
     title: "HR Operations Management",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Streamline your HR processes for efficiency and employee satisfaction—let us handle the details.",
     imageUrl: "/HR-Operations-Management.png",
   },
   {
     title: "Recruitment & Staffing",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Find the right talent quickly with our tailored recruitment strategies for your needs. ",
     imageUrl: "/Recruitment-Staffing.png",
   },
   {
     title: "Life Coach",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Empower your team with personalized coaching that fosters growth and well-being.",
     imageUrl: "/Life-Coach.png",
   },
   {
     title: "Nutritionist",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Enhance workplace wellness with expert nutrition guidance tailored to your employees’ needs. ",
     imageUrl: "/Nutritionist.png",
   },
   {
     title: "Psychologist",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Support mental health with professional counseling services that promote a thriving workplace.",
     imageUrl: "/Psychologist.png",
   },
 ];
@@ -61,7 +61,7 @@ const HrStaffingWellBeing = () => {
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-sm text-white text-left">
+                  <p className="text-lg text-white text-left">
                     {service.description}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ const HrStaffingWellBeing = () => {
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-sm text-white text-left">
+                  <p className="text-lg text-white text-left">
                     {service.description}
                   </p>
                 </div>

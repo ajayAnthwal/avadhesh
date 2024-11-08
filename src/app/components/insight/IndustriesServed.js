@@ -1,42 +1,39 @@
 import React from "react";
+import BlogCard from "../blogCard/BlogCard";
 
 const IndustriesServed = () => {
+  const industriesData = [
+    {
+      imgSrc: "/Cloud-Opportunity.png",
+      title: "Cloud Opportunity BANT Qualified Lead Generation",
+      description:
+        "How our sales team helped AWS reach new customers even in remote localities.",
+    },
+    {
+      imgSrc: "/Decoding-Audience-of-Data-through-case-study-and-use-cases.png",
+      title: "Decoding Audience of Data Innovation Company",
+      description:
+        "Targeting the right audience for better social media engagement.",
+    },
+    {
+      imgSrc: "/Defining-&-Enhancing-the-Brand-personality.png",
+      title: "Defining the Brand Personality of a FMCG",
+      description:
+        "Creating a brand identity for an Aata company by stimulating universal emotion.",
+    },
+  ];
+
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-transparent">
       <div className="container mx-auto text-center">
-        <h1 className="text-3xl font-bold mb-4">Industries we served</h1>
+        <h1 className="text-3xl font-bold mb-4">Industries We Served</h1>
         <p className="text-lg mb-8 text-gray-600">
-          Lorem Ipsum is simply dummy text of the <br /> printing and
-          typesetting industry.
+          Lorem Ipsum is simply dummy text of the <br /> printing and typesetting industry.
         </p>
-        <div className="flex flex-col md:flex-row md:flex-wrap items-center space-y-6 md:space-y-0 justify-center gap-6 IndustriesServed">
-          <div className="flex flex-col md:flex-row w-full justify-center gap-6">
-            <div className="bg-white shadow-md rounded-lg border border-black h-64 w-full md:w-1/4 flex flex-col justify-end p-4">
-              <p className="text-lg font-semibold text-gray-800 text-left">
-                Lorem Ipsum is simply text of the printing
-              </p>
-            </div>
-
-            <div className="bg-white shadow-md rounded-lg border border-black h-64 w-full md:w-1/4 flex flex-col justify-end p-4">
-              <p className="text-lg font-semibold text-gray-800 text-left">
-                Lorem Ipsum is simply text of the printing
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row w-full justify-center gap-6">
-            <div className="bg-white shadow-md rounded-lg border border-black h-64 w-full md:w-1/4 flex flex-col justify-end p-4">
-              <p className="text-lg font-semibold text-gray-800 text-left">
-                Lorem Ipsum is simply text of the printing
-              </p>
-            </div>
-
-            <div className="bg-white shadow-md rounded-lg border border-black h-64 w-full md:w-1/4 flex flex-col justify-end p-4">
-              <p className="text-lg font-semibold text-gray-800 text-left">
-                Lorem Ipsum is simply text of the printing
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {industriesData.map((card, index) => (
+            <BlogCard key={index} card={card} />
+          ))}
         </div>
       </div>
     </section>

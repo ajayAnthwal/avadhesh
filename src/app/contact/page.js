@@ -1,12 +1,64 @@
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import Sliders from "../components/sliders/sliders";
+"use client";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import FAQ from "@/app/components/contact_us/FAQ";
 import Call_us from "../components/footer/Call_us";
+import Image from "next/image";
+import React, { useState } from "react";
 
-export default function Contact() {
+const Carousel = () => {
+  const brands = [
+    { logo: "/Wheaton-Advisors.png", name: "Wheaton Advisors" },
+    { logo: "/Synycs.png", name: "Synycs" },
+    { logo: "/sipnscreen.png", name: "Sip n Screen" },
+    { logo: "/Simtech.png", name: "Simtech" },
+    { logo: "/Shi _ locuz-an-shi-company.png", name: "Locuz (An SHI Company)" },
+    { logo: "/Sharma-Ji-Ka-Aata.png", name: "Sharma Ji Ka Aata" },
+    { logo: "/rtds.png", name: "RTDS" },
+    { logo: "/Quadra.png", name: "Quadra" },
+    { logo: "/HT-Media-Group.png", name: "HT Media Group" },
+    { logo: "/Esmario.png", name: "Esmario" },
+    { logo: "/eficens.png", name: "Eficens" },
+    { logo: "/Clymbr.png", name: "Clymbr" },
+    { logo: "/Apollo-homecare.png", name: "Apollo Homecare" },
+  ];
+
+  const ITEMS_PER_VIEW = 5;
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleNext = () => {
+    if (startIndex + ITEMS_PER_VIEW < brands.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
   return (
     <div>
-      <Sliders />
+      <div
+        className="relative w-full h-[300px] md:h-[500px] flex items-center"
+        style={{
+          backgroundImage: "url('/Contact.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "right",
+        }}
+      >
+        <div className="px-4 md:px-16 text-left text-black container mx-auto">
+          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
+            Contact Us
+          </h3>
+        </div>
+      </div>
 
       <div className="bg-gray-50 flex flex-col justify-between">
         <div className="max-w-[86rem] mx-auto px-4 py-16">
@@ -14,14 +66,11 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in touch with us</h2>
               <p className="text-gray-600 mb-8 text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s.Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industry standard dummy text ever since the 1500s. Lorem Ipsum
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Looking for customized solutions or more details about our CFaaS
+                solutions? At AvadheshCo, we’re here to help you achieve
+                operational excellence and accelerate growth with our flexible,
+                outcome-driven models. Contact us today to explore how we can
+                support your success!
               </p>
 
               <div className="space-y-6">
@@ -32,7 +81,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-lg">Address</h4>
                     <p className="text-gray-500">
-                      Lorem Ipsum is simply dummy text.
+                      Avadhesh India Advisory Services LLP <br /> Plot No. 1625,
+                      Sri Sai Towers, Venkata <br /> Ramana Colony, KPHB,
+                      Hyderabad, <br /> Telangana- 500085
                     </p>
                   </div>
                 </div>
@@ -43,9 +94,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone No.</h4>
-                    <p className="text-gray-500">
-                      Lorem Ipsum is simply dummy text.
-                    </p>
+                    <p className="text-gray-500">+91 85559 47892</p>
                   </div>
                 </div>
 
@@ -55,15 +104,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">E-Mail</h4>
-                    <p className="text-gray-500">
-                      Lorem Ipsum is simply dummy text.
-                    </p>
+                    <p className="text-gray-500">hello@avadhesh.co</p>
                   </div>
                 </div>
-
-                <hr />
               </div>
             </div>
+
             <div className="bg-white p-8 shadow-lg rounded-lg border border-black">
               <form>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -130,7 +176,7 @@ export default function Contact() {
 
                 <div className="mb-6">
                   <label htmlFor="message" className="block mb-2 font-semibold">
-                    Email Address
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -146,37 +192,57 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="bg-yellow-100 py-12">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Trusted by these mega brands
-            </h2>
-            <div className="flex gap-6 justify-items-center justify-center items-center">
-              <div className="w-40 h-20 bg-white rounded-lg  border border-black"></div>
-              <div className="w-40 h-20 bg-white rounded-lg border border-black"></div>
-              <div className="w-40 h-20 bg-white rounded-lg border border-black"></div>
-              <div className="w-40 h-20 bg-white rounded-lg border border-black"></div>
-              <div className="w-40 h-20 bg-white rounded-lg border border-black"></div>
+
+        <div className="bg-yellow-100 py-8">
+          <h2 className="text-center text-lg font-semibold mb-4">
+            Trusted by these mega brands
+          </h2>
+          <div className="flex items-center justify-center space-x-4">
+            <button
+              onClick={handlePrev}
+              disabled={startIndex === 0}
+              className="text-black bg-white p-2 rounded-full shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <FaChevronLeft size={20} />
+            </button>
+            <div className="overflow-hidden w-full max-w-4xl">
+              <div
+                className="flex transition-transform duration-300"
+                style={{
+                  transform: `translateX(-${
+                    (startIndex * 100) / ITEMS_PER_VIEW
+                  }%)`,
+                }}
+              >
+                {brands.map((brand, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-1/5 p-2 flex items-center justify-center"
+                  >
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="w-28 h-28 object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
+            <button
+              onClick={handleNext}
+              disabled={startIndex + ITEMS_PER_VIEW >= brands.length}
+              className="text-black bg-white p-2 rounded-full shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <FaChevronRight size={20} />
+            </button>
           </div>
         </div>
-      </div>
 
-      <div className="mt-7">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220409.6832235383!2d77.85232418505264!3d30.325325143216006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1725541674325!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-      <div className="mt-5">
+        <Call_us />
         <FAQ />
       </div>
-      <Call_us />
     </div>
   );
-}
+};
+
+export default Carousel;

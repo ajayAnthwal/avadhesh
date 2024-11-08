@@ -2,18 +2,115 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import { FaLinkedin } from "react-icons/fa";
 
 const AvatarsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [maxToShow, setMaxToShow] = useState(1);
+  const [maxToShow, setMaxToShow] = useState(3);
 
   const avatars = [
-    { id: 1, img: "/developer.webp" },
-    { id: 2, img: "/developer.webp" },
-    { id: 3, img: "/developer.webp" },
-    { id: 4, img: "/" },
-    { id: 5, img: "/developer.webp" },
-    { id: 6, img: "/developer.webp" },
+    {
+      id: 1,
+      name: "Shristi Shrivastava",
+      title: "Digital Marketing Manager",
+      img: "/1.png",
+    },
+    {
+      id: 2,
+      name: "Arun S",
+      title: "Digital Marketing Executive",
+      img: "/6.png",
+    },
+    {
+      id: 3,
+      name: "Adarsh Kangra",
+      title: "UI/UX Designer",
+      img: "/11.png",
+    },
+    {
+      id: 4,
+      name: "Samson Paul",
+      title: "Customer Advisor - Tech",
+      img: "/3.png",
+    },
+    {
+      id: 5,
+      name: "Naina",
+      title: "Lead - Strategic Initiatives",
+      img: "/5.png",
+    },
+    {
+      id: 6,
+      name: "Bushra Mansoori",
+      title: "Customer Advisor (ISR)",
+      img: "/9.png",
+    },
+    {
+      id: 7,
+      name: "Meenakshi Perumal",
+      title: "Customer Advisor ",
+      img: "/7.png",
+    },
+    {
+      id: 8,
+      name: "Jyoti Rehal",
+      title: "Customer Advisor",
+      img: "/8.png",
+    },
+    {
+      id: 9,
+      name: "Richa Gupta",
+      title: "Business Analyst",
+      img: "/10.png",
+    },
+    {
+      id: 10,
+      name: "Aditi Singh",
+      title: "Manager - Cloud Sales",
+      img: "/Aditi-Singh.png",
+    },
+    {
+      id: 11,
+      name: "Apurva",
+      title: "Sr. Manager - CRM & Staffing",
+      img: "/Apurva.png",
+    },
+    {
+      id: 12,
+      name: "Malavika Batchu",
+      title: "Sr. Business Manager",
+      img: "/Malavika-Batchu.png",
+    },
+    {
+      id: 13,
+      name: "Kannha Salooja",
+      title: "SR. Project Manager",
+      img: "/Kannha.png",
+    },
+    {
+      id: 14,
+      name: "Muniraj P",
+      title: "Sr. Customer Advisor -Tech",
+      img: "/MuniRaj.png",
+    },
+    {
+      id: 15,
+      name: "Shashikant P",
+      title: "Co-founder",
+      img: "/Shashikant.png",
+    },
+    {
+      id: 16,
+      name: "Shubham Belorkar",
+      title: "Customer Advisor - Tech",
+      img: "/Shubham.png",
+    },
+    {
+      id: 17,
+      name: "Rohit Thakur",
+      title: "Creative Design Manager",
+      img: "/Rohit.png",
+    },
   ];
 
   useEffect(() => {
@@ -54,21 +151,31 @@ const AvatarsSection = () => {
               className="cursor-pointer"
               onClick={goToPrev}
             />
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full px-4">
               {avatars
                 .slice(currentIndex, currentIndex + maxToShow)
-                .map((avatar) => (
+                .map((member) => (
                   <div
-                    key={avatar.id}
-                    className="border border-black rounded-lg w-full h-96 bg-white flex items-center justify-center"
+                    key={member.id}
+                    className="border-2 border-gray-300 rounded-lg shadow-lg p-4 text-center bg-white"
                   >
-                    <Image
-                      src={avatar.img}
-                      alt="image 4"
-                      className="h-[350px] w-full object-cover"
-                      width={500}
-                      height={400}
-                    />
+                    <div className="w-full h-[23rem] relative mb-4">
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-lg"
+                      />
+                    </div>
+                    <h3 className="text-lg font-bold">{member.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{member.title}</p>
+                    <a
+                      href="#"
+                      className="flex justify-center items-center text-blue-700 mt-2"
+                    >
+                      <FaLinkedin size={24} style={{ color: "black" }} />
+                    </a>
                   </div>
                 ))}
             </div>
@@ -78,9 +185,6 @@ const AvatarsSection = () => {
               onClick={goToNext}
             />
           </div>
-          <button className="mt-6 px-6 py-2 border border-black rounded-md hover:bg-gray-200 transition duration-200 bg-white">
-            View all members
-          </button>
         </div>
       </section>
     </>

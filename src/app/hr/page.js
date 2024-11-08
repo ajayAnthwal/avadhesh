@@ -22,24 +22,33 @@ const Hr = () => {
                 offering
               </p>
               <div className="mt-9">
-                <button className="btn-gray btn-res btn-offer"></button>
+                <button
+                  style={{
+                    width: "auto",
+                    padding: "10px 20px",
+                    textAlign: "center",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "20px",
+                    border: "1px solid black",
+                  }}
+                >
+                  Empower Your Team Now
+                </button>
               </div>
             </div>
             <div className="flex flex-col justify-between w-full md:w-2/3 -mt-10">
               <p className="text-black text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. Lorem Ipsum
-                is simply dummy text.
+                Your people are our priority. From streamlined HR management and
+                expert staffing to personalized well-being services like life
+                coaching, nutrition, and mental health support, we’re here to
+                empower your team.
               </p>
               <br />
               <p className="text-black text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. Lorem Ipsum
-                is simply dummy text.
+                Ready to enhance your workforce’s potential? Explore how our
+                tailored HR and well-being services put your people first. 
               </p>
             </div>
           </div>

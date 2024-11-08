@@ -15,11 +15,7 @@ const Footer = () => {
                 className="w-5 h-5 mr-2 mt-1"
               />
               <span>
-                Avadhesh India Advisory Services LLP
-                <br />
-                Plot No. 1625, Sri Sai Towers, Venkata Ramana Colony,
-                <br />
-                KPHB, Hyderabad, Telangana- 500085
+              Avadhesh India Advisory Services LLP <br/> Plot No. 1625, Sri Sai Towers, Venkata <br/> Ramana Colony, KPHB, Hyderabad, <br/> Telangana- 500085
               </span>
             </p>
             <p className="flex items-center justify-center md:justify-start mb-2">

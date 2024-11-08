@@ -4,44 +4,50 @@ const services = [
   {
     title: "Digital Marketing / SEO",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Boost your online presence with tailored strategies that drive traffic and engagement.",
     imageUrl: "/Digital-Marketing.png",
   },
   {
     title: "Email / Calling Campaigns",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Reach your audience directly with personalized campaigns that convert leads into loyal customers.",
     imageUrl: "/Email-Marketing.png",
   },
   {
     title: "Event Management",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Create unforgettable experiences that strengthen connections and elevate your brand’s visibility.",
     imageUrl: "/Event-Management_.png",
   },
   {
     title: "Print & Display Ads",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Maximize brand impact with eye-catching print and display ads that capture attention.",
     imageUrl: "/Print-Display-Ads_.png",
   },
   {
     title: "Corp Materials",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Deliver professional, high-quality corporate materials that leave a lasting impression on your clients. ",
     imageUrl: "/Corp-Material.png",
   },
   {
     title: "Content Marketing",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Engage your audience with compelling content that builds trust and drives meaningful interactions.",
     imageUrl: "/Content-Marketing_.png",
   },
   {
     title: "PR & Branding",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Strengthen your brand’s image with strategic PR that amplifies your voice and reputation.",
     imageUrl: "/PR-Branding.png",
+  },
+  {
+    title: "Search Engine Optimization",
+    description:
+      "Boost visibility and rankings with expert SEO that puts your business at the top. ",
+    imageUrl: "/SEO.png",
   },
 ];
 
@@ -56,8 +62,9 @@ const MarketingServices = () => {
             industry.
           </p>
         </div>
+        {/* Adjust the grid to display all 8 services */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto px-4-5">
-          {services.slice(0, 6).map((service, index) => (
+          {services.map((service, index) => (
             <div
               key={index}
               className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
@@ -73,7 +80,7 @@ const MarketingServices = () => {
                     {service.title}
                   </h3>
                   <div className="px-5">
-                    <p className="text-sm text-white text-left">
+                    <p className="text-lg text-white text-left">
                       {service.description}
                     </p>
                   </div>
@@ -81,29 +88,6 @@ const MarketingServices = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex justify-center mt-6 items-center">
-          <div
-            className="bg-cover bg-black bg-center h-64 w-full md:w-1/3 rounded-lg shadow-md group bottom-service"
-            style={{
-              backgroundImage: `url(${services[6].imageUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="rounded-lg group-hover:bg-opacity-70 transition duration-300">
-              <div className="flex flex-col justify-between  h-64  py-6">
-                <h3 className="text-xl font-bold text-white mt-4 ml-5">
-                  {services[6].title}
-                </h3>
-                <div className="px-5">
-                  <p className="text-sm text-white text-left">
-                    {services[6].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

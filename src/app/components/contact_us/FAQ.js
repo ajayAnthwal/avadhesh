@@ -11,24 +11,29 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Frequently Asked Questions?",
-      answer: "This is the answer to the first question.",
+      question: "What is CFaaS and how can it benefit my business?",
+      answer:
+        "CFaaS stands for Corporate Functions As A Service, a flexible model that helps businesses outsource essential functions like HR, IT support, procurement, finance, and more. We focus on filling the gaps in your strategy, enabling you to concentrate on your core priorities and drive business success.",
     },
     {
-      question: "Frequently Asked Questions?",
-      answer: "This is the answer to the second question.",
+      question: "How does CFaaS ensure the desired outcomes for my business?",
+      answer:
+        "We’re outcome-focused. Together, we define critical outcomes that are valuable for your business, and through our integrated approach and market expertise, we deliver results that align with your goals.",
     },
     {
-      question: "Frequently Asked Questions?",
-      answer: "This is the answer to the third question.",
+      question: "What services are covered under CFaaS?",
+      answer:
+        "We offer a wide range of services, including HR, CFO-As-A-Service, IT support, procurement, legal, market research, customer service, and corporate gifting. Each service is designed to support business growth, operational excellence, and innovation.",
     },
     {
-      question: "Frequently Asked Questions?",
-      answer: "This is the answer to the fourth question.",
+      question: "Can CFaaS adapt to the specific needs of my business?",
+      answer:
+        "Absolutely! We offer flexible models that adjust to your business needs—whether short-term, long-term, or transactional. Our approach ensures that you get the right support at the right time.",
     },
     {
-      question: "Frequently Asked Questions?",
-      answer: "This is the answer to the fifth question.",
+      question: "How does CFaaS help with operational efficiency?",
+      answer:
+        "CFaaS focuses on setting up efficient processes, maintaining operational excellence, and supporting employee growth, helping your business run smoother while freeing up your bandwidth to focus on strategic growth.",
     },
   ];
 
@@ -38,7 +43,7 @@ export default function FAQ() {
       <div className="py-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-8">
-            Frequently Asked Questions?
+            Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (

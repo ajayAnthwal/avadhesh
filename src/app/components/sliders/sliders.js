@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "../../css/slider.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import "../../css/slider.css";
 
 const Sliders = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,15 +9,23 @@ const Sliders = () => {
   const slides = [
     {
       id: 1,
-      content: "Lorem Ipsum is simply dummy text of the printing typesetting.",
-      buttonText: "Learn more",
-      backgroundImage: "/slider-images.jpg",
+      content:
+        "Launching with Purpose Performance Marketing Strategies that Strike Gold",
+      buttonText: "Launch your business to new heights with us!",
+      backgroundImage: "/Homepage-Hero-Banner.png",
     },
     {
       id: 2,
-      content: "Lorem Ipsum is simply dummy text of the printing typesetting.",
-      buttonText: "Learn More",
-      backgroundImage: "/slider-images-2.png",
+      content: "Strategies that Attract Top Talents",
+      buttonText: "Create Your Winning Strategy Today!",
+      backgroundImage: "/Homepage-Hero-Banner-2.png",
+    },
+    {
+      id: 3,
+      content:
+        "Smarter Risk Management: How Startups and SMBs Can Harness AI and Data Analytics",
+      buttonText: "Transform your approach to risk management today!",
+      backgroundImage: "/Homepage-Hero-Banner-3.png",
     },
   ];
 
@@ -41,47 +49,51 @@ const Sliders = () => {
   }, [currentSlide]);
 
   return (
-    <div className="slider">
+    <div className="relative overflow-hidden w-full h-[500px] md:h-[500px]">
       {slides.map((slide, index) => (
         <div
-          className="slider-content"
-          key={index}
+          key={slide.id}
+          className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+            currentSlide === index ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
           style={{
-            opacity: currentSlide === index ? 1 : 0,
-            transform: `translateY(${currentSlide === index ? 0 : 50}px)`,
-            transition: "opacity 0.5s ease, transform 0.5s ease",
             backgroundImage: `url(${slide.backgroundImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            width: "100%",
-            position: currentSlide === index ? "relative" : "absolute",
           }}
         >
-          <div className="container m-auto">
-            <div className="slide-text">
-              <div className="d-flex flex-column">
-                <h3 className="w-241 mb-20">{slide.content}</h3>
-                <button className="btn-gray btn-res text-xs">
-                  {slide.buttonText}
-                </button>
-              </div>
+          <div className="flex items-center h-full px-6 md:px-16 container mx-auto">
+            <div className="text-left text-black">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4">
+                {slide.content}
+              </h3>
+              <button className="mt-4 px-4 py-2 bg-white text-black border border-black rounded-md text-sm md:text-base">
+                {slide.buttonText}
+              </button>
             </div>
           </div>
         </div>
       ))}
 
-      <button className="prev" onClick={prevSlide}>
-        <MdKeyboardArrowLeft />
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full hover:bg-gray-200 focus:outline-none"
+        onClick={prevSlide}
+      >
+        <MdKeyboardArrowLeft size={24} />
       </button>
-      <button className="next" onClick={nextSlide}>
-        <MdKeyboardArrowRight />
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full hover:bg-gray-200 focus:outline-none"
+        onClick={nextSlide}
+      >
+        <MdKeyboardArrowRight size={24} />
       </button>
-
-      <div className="dots">
+      <div className="absolute bottom-4 left-6 flex space-x-2">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`dot ${index === currentSlide ? "active" : ""}`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              currentSlide === index ? "bg-black" : "bg-gray-400"
+            }`}
             onClick={() => goToSlide(index)}
           ></span>
         ))}

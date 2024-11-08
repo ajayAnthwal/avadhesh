@@ -24,22 +24,16 @@ const HomePage = () => {
           </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-left text-2xl font-bold mb-4">
-              Lorem Ipsum is simply dummy
+              Augment. Amplify. Accelerate. 
             </h2>
             <p className="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. Lorem Ipsum is simply dummy text
-              of the printing and typesetting industry. Lorem Ipsum has been the
-              industry standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type
-              specimen book. Lorem Ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem Ipsum has been the Lorem it.
+              At AvadheshCo, we Augment your operations to achieve excellence
+              and reduce costs. We Amplify business outcomes to maximize ROI and
+              Accelerate success by streamlining processes and eliminating
+              distractions. As the world’s first CFaaS (Corporate Functions as a
+              Service) provider, we offer flexible solutions to drive growth and
+              efficiency, positioning ourselves as your trusted partner in
+              long-term success.
             </p>
           </div>
         </div>
@@ -58,55 +52,70 @@ const HomePage = () => {
             Latest Highlight
           </h1>
           <p className="text-center text-lg mb-10">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            <br />
-            industry. Lorem Ipsum has been the industry&#39;s standard.
+            Stay ahead with our latest insights!
           </p>
           <div className="flex flex-col lg:flex-row gap-10">
             <div className="lg:w-1/3 mb-4 lg:mb-0">
-              <div className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg">
+              <div
+                className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('abstract-backdrop-with-multi-colored-pattern-futuristic-motion-generated-by-ai.jpg')",
+                }}
+              >
                 <div className="content text-lg landing">
-                  Landing / Blog / Highlights
+                  <Image
+                    src="/geometric-abstract-design-with-minimalistic-shapes-neutral-background.jpg" 
+                    alt="image"
+                    width={500} 
+                    height={282} 
+                    layout="responsive" 
+                    priority 
+                  />
+                 
                 </div>
+                <p className="text-white"> Get a CFaaS Offering E-book</p>
               </div>
             </div>
+
             <div className="lg:w-3/4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="box h-64 bg-white rounded-md shadow-lg">
-                  <Image
-                    src="/developer.webp"
-                    alt="Developer"
-                    className="h-[255px] w-full object-cover"
-                    width={500}
-                    height={255}
-                  />
+                <div
+                  className="box h-72 bg-white rounded-md shadow-lg relative"
+                  style={{
+                    backgroundImage: "url('/Highlight-section-1.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                  }}
+                >
+                  <div className="absolute top-4 left-12 text-white m-auto text-lg font-semibold">
+                    Learn to Manage Imposter Syndrome
+                  </div>
                 </div>
-                <div className="box h-64 bg-white rounded-md shadow-lg">
-                  <Image
-                    src="/developer.webp"
-                    alt="Developer"
-                    className="h-[255px] w-full object-cover"
-                    width={500}
-                    height={255}
-                  />
+
+                <div className="box h-72 bg-purple-500 rounded-md shadow-lg flex items-center justify-center">
+                  <div className="text-black text-lg font-semibold">
+                    Brand Your Armor for 2024 and Beyond
+                  </div>
                 </div>
-                <div className="box h-64 bg-white rounded-md shadow-lg">
-                  <Image
-                    src="/developer.webp"
-                    alt="Developer"
-                    className="h-[255px] w-full object-cover"
-                    width={500}
-                    height={255}
-                  />
+
+                <div className="box h-72 bg-orange-500 rounded-md shadow-lg flex items-center justify-center">
+                  <div className="text-black text-lg font-semibold">
+                    Amplify Your Tech Journey
+                  </div>
                 </div>
-                <div className="box h-64 bg-white rounded-md shadow-lg">
-                  <Image
-                    src="/developer.webp"
-                    alt="Developer"
-                    className="h-[255px] w-full object-cover"
-                    width={500}
-                    height={255}
-                  />
+
+                <div
+                  className="box h-72 bg-white rounded-md shadow-lg relative"
+                  style={{
+                    backgroundImage: "url('/Highlight-section-2.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="absolute top-4 left-12 text-black text-lg font-semibold">
+                    Content Marketing for Google Algorithm or for Your Readers?
+                  </div>
                 </div>
               </div>
             </div>

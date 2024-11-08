@@ -22,24 +22,33 @@ const What_we_do = () => {
                 offering
               </p>
               <div className="mt-9">
-                <button className="btn-gray btn-res btn-offer"></button>
+                <button
+                  style={{
+                    width: "auto",
+                    padding: "10px 20px",
+                    textAlign: "center",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "20px",
+                    border: "1px solid black",
+                  }}
+                >
+                  Amplify Your Brand Now 
+                </button>
               </div>
             </div>
             <div className="flex flex-col justify-between w-full md:w-2/3 -mt-10">
               <p className="text-black text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. Lorem Ipsum
-                is simply dummy text.
+                <strong> Your growth is our mission.</strong> From powerful
+                digital marketing and SEO to engaging campaigns and
+                unforgettable events, we’ve got every tool to elevate your
+                brand.
               </p>
               <br />
               <p className="text-black text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. Lorem Ipsum
-                is simply dummy text.
+                Ready to take the next step? Explore how our marketing services
+                are designed to drive results and amplify your success. 
               </p>
             </div>
           </div>

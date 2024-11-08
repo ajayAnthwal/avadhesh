@@ -1,6 +1,24 @@
 import React from "react";
 import Image from "next/image";
 
+const cards = [
+  {
+    imgSrc: "/Cloud-Opportunity.png",
+    title: "Cloud Opportunity BANT Qualified Lead Generation",
+    description: "How our sales team helped AWS reach new customers even in remote localities",
+  },
+  {
+    imgSrc: "/Decoding-Audience-of-Data-through-case-study-and-use-cases.png",
+    title: "Decoding Audience for a Data Innovation Company",
+    description: "Targeting the right audience for better social media engagement using relevant case studies",
+  },
+  {
+    imgSrc: "/Defining-&-Enhancing-the-Brand-personality.png",
+    title: "Defining the brand personality of a FMCG  ",
+    description: "Creating a brand identity for an Aata company by stimulating a universal emotion - Nostalgia",
+  },
+];
+
 const Industries = () => {
   return (
     <section className="py-12">
@@ -9,53 +27,44 @@ const Industries = () => {
           Industries we served
         </h1>
         <p className="text-center text-lg mb-8">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          With experience across diverse industries, we’ve delivered real-world
+          results. <br />
+          Explore our real-world examples to see how our CFaaS solutions drive
           <br />
-          industry. Lorem Ipsum has been the industry standard.
+          success in every sector.
         </p>
-        <div className="flex flex-col lg:flex-row justify-center gap-6 w-full">
-          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4 relative">
-              <Image
-                src="/developer.webp"
-                alt="Developer"
-                className="h-[177px] w-full object-cover"
-                width={500}
-                height={177}
-              />
-              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                Button
-              </button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl mx-auto">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-lg p-6 h-auto transition-transform transform hover:scale-105 hover:shadow-2xl"
+              style={{
+                borderRadius: "15px",
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              
+              <div className="h-44 bg-white rounded-md mb-4 relative overflow-hidden">
+                <Image
+                  src={card.imgSrc}
+                  alt={card.title}
+                  className="h-[177px] w-full object-cover rounded-md"
+                  width={500}
+                  height={177}
+                />
+              </div>
+              <div className="flex justify-center mb-4">
+                <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-700">
+                  Blog
+                </button>
+              </div>
+              
+              <h3 className="text-xl font-semibold mb-2 text-center">
+                {card.title}
+              </h3>
+              <p className="text-gray-600 text-center">{card.description}</p>
             </div>
-          </div>
-          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4 relative">
-              <Image
-                src="/developer.webp"
-                alt="Developer"
-                className="h-[177px] w-full object-cover"
-                width={500}
-                height={177}
-              />
-              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                Button
-              </button>
-            </div>
-          </div>
-          <div className="bg-gray-300 shadow-lg rounded-lg p-6 w-full lg:w-1/3 h-96">
-            <div className="h-44 bg-white rounded-md mb-4 relative">
-              <Image
-                src="/developer.webp"
-                alt="Developer"
-                className="h-[177px] w-full object-cover"
-                width={500}
-                height={177}
-              />
-              <button className="absolute bottom-[-14%] left-1/2 transform -translate-x-1/2 bg-black hover:bg-gray-300 text-white py-2 px-4 rounded z-10">
-                Button
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

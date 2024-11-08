@@ -5,108 +5,106 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
 
 const RotateBox = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
       content:
-        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth",
+        "Our HR and Event Management teams brought team-building to life with a vibrant, achievement-focused day of celebration. Packed with engaging activities, the event strengthened connections and honored success. See how AvadheshCo’s expertise in HR and events creates memorable experiences that elevate team spirit and performance.",
+      image: "/First-Event.png",
     },
     {
       content:
-        "World’s first and only Corporate Functions as a Service company. Your Partner-in-Growth",
+        "Our Sales and Marketing teams joined forces to help our client Locuz connect with CISOs through strategic meetings in Mumbai and Bangalore. From inviting key guests to crafting a landing page with event details, AvadheshCo delivered a seamless experience, showcasing the value of targeted relationship-building and precise marketing.",
+      image: "/Second-Event.png",
+    },
+    {
+      content:
+        "Helping Locuz showcase AWS migration insights, our Sales, Event Management, and Marketing teams joined forces to create an impactful event experience. From personalized guest outreach to a captivating landing page detailing the agenda, we ensured every element aligned to engage and inform. Ready to elevate your next event?",
+      image: "/Third-Event.png",
+    },
+    {
+      content:
+        "Imagine a launch where every digital detail aligns perfectly! For a theatre/café, our IT Support and Marketing teams delivered a custom website, secure bookings, automated messaging, and a powerful local reach through a strategic social media plan & some powerful offline campaigns. Discover how we elevate digital presence with every detail covered.",
+      image: "/Fourth-Event.png",
     },
   ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
+
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+    );
+  };
 
   return (
     <>
-      <img src="./Vector (2).png" alt="img" className="w-full" />
+      <img src="./Vector (2).png" alt="Vector Image" className="w-full" />
       <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] relative">
-        <div className="container-cards text-center w-full px-4-5 mx-auto py-8 relative">
+        <div className="container-cards text-center w-full px-4 mx-auto py-8 relative">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
             CFaaS
           </h1>
           <p className="text-center text-lg mb-8">
-            World first and only Corporate Functions as a Service company.
+            World’s first and only Corporate Functions as a Service company.
             <br />
             Your Partner-in-Growth
           </p>
-          <div className="relative border border-black w-full max-w-screen-xl mx-auto">
-            <div className="absolute -top-16 left-4 rotate-img-container z-10">
-              <Image
-                src="/Rectangle.png"
-                alt="Rotated Box"
-                width={200}
-                height={200}
-                className="rotate-img"
-              />
-            </div>
 
-            <div className="slider slider-container overflow-hidden relative w-full h-full">
-              <div
-                className="slider-content flex transition-transform duration-500"
-                style={{
-                  transform: `translateX(-${currentSlide * 100}%)`,
-                }}
-              >
-                {slides.map((slide, index) => (
-                  <div
-                    className="slide flex justify-between w-full h-full"
-                    key={index}
-                  >
-                    <div
-                      className={`slide-content flex-grow rotate-cards ${
-                        index === 1 ? "second-slide-text" : ""
-                      }`}
-                    >
-                      <h3 className="text-xl text-res">{slide.content}</h3>
-                    </div>
+          <div
+            className="relative border border-black w-full mx-auto"
+            style={{ background: "#FFB055" }}
+          >
+          <div className="relative w-full mx-auto overflow-hidden container sm:max-w-screen-xl md:max-w-screen-2xl">
+
+              <div className="flex items-center justify-between p-4 flex-col sm:flex-row">
+                <button
+                  className="bg-gray-600 text-white p-2 rounded-full mb-4 sm:mb-0"
+                  onClick={prevSlide}
+                  style={{ marginRight: "10px" }}
+                >
+                  <MdKeyboardArrowLeft size={24} />
+                </button>
+
+                <div className="flex w-full items-center justify-center mx-auto flex-col sm:flex-row">
+                  <div className="relative w-full sm:w-1/3 h-full overflow-hidden mb-4 sm:mb-0">
+                    <Image
+                      src={slides[currentIndex].image}
+                      alt="Event Image"
+                      width={600}
+                      height={450}
+                      className="w-full h-full object-cover rounded-lg transform rotate-[2deg]"
+                      style={{
+                        paddingTop: "20px",
+                        paddingBottom: "20px",
+                      }}
+                    />
                   </div>
-                ))}
-              </div>
+                  <div className="flex flex-col justify-center w-full sm:w-2/3 pl-6 text-left">
+                    <p className="text-black text-lg">
+                      {slides[currentIndex].content}
+                    </p>
+                  </div>
+                </div>
 
-              <button
-                className="prev absolute top-1/2 left-2 transform -translate-y-1/2 text-white px-2 py-1"
-                onClick={prevSlide}
-              >
-                <MdKeyboardArrowLeft color="white" size={50} />
-              </button>
-              <button
-                className="next absolute top-1/2 right-2 transform -translate-y-1/2 text-white px-2 py-1"
-                onClick={nextSlide}
-              >
-                <MdKeyboardArrowRight color="white" size={50} />
-              </button>
-
-              <div className="dots absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {slides.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`dot w-3 h-3 rounded-full bg-gray-300 ${
-                      index === currentSlide ? "bg-gray-800" : ""
-                    }`}
-                    onClick={() => goToSlide(index)}
-                  ></span>
-                ))}
+                <button
+                  className="bg-gray-600 text-white p-2 rounded-full mt-4 sm:mt-0"
+                  onClick={nextSlide}
+                  style={{ marginLeft: "10px" }}
+                >
+                  <MdKeyboardArrowRight size={24} />
+                </button>
               </div>
             </div>
           </div>
