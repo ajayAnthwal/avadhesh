@@ -54,9 +54,9 @@ const Marketing_insights = () => {
                       <Image
                         src={card.imgSrc}
                         alt={card.title}
-                        className="h-[177px] w-full object-cover rounded-md"
+                        className="h-[268px] w-full object-cover rounded-md"
                         width={500}
-                        height={177}
+                        height={268}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
