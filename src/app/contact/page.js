@@ -53,7 +53,7 @@ const Carousel = () => {
           backgroundPosition: "right",
         }}
       >
-        <div className="px-4 md:px-16 text-left text-black container mx-auto">
+        <div className=" text-left text-black container mx-auto">
           <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
             Contact Us
           </h3>
@@ -61,7 +61,7 @@ const Carousel = () => {
       </div>
 
       <div className="bg-gray-50 flex flex-col justify-between">
-        <div className="max-w-[86rem] mx-auto px-4 py-16">
+        <div className="container mx-auto py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in touch with us</h2>

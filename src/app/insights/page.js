@@ -41,7 +41,7 @@ const Insights = () => {
           backgroundPosition: "right",
         }}
       >
-        <div className="px-4 md:px-16 text-left text-black container mx-auto">
+        <div className="text-left text-black container mx-auto">
           <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
           Insights
           </h3>
@@ -49,7 +49,7 @@ const Insights = () => {
         </div>
       </div>
       <div className="flex items-center justify-center bg-white m-auto container">
-        <div className="w-full px-4-5 mt-16">
+        <div className="w-full mt-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold">Our Featured Blogs</h2>
             <p className="text-gray-600">
@@ -83,7 +83,7 @@ const Insights = () => {
 
       <div className="bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] res-desktop">
         
-        <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl">
+        <div className="container flex flex-col items-center py-12 mx-auto">
         <IndustriesServed />
           <div className="text-center mb-12 max-w-4xl">
             <h1 className="text-center about-title text-4xl font-bold mb-6">

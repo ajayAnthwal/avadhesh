@@ -49,7 +49,7 @@ const Sliders = () => {
   }, [currentSlide]);
 
   return (
-    <div className="relative overflow-hidden w-full h-[500px] md:h-[500px]">
+    <div className="relative overflow-hidden w-full h-[500px] md:h-[500px] z-0">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -62,7 +62,7 @@ const Sliders = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex items-center h-full px-6 md:px-16 container mx-auto">
+          <div className="flex items-center h-full px-6 container mx-auto">
             <div className="text-left text-black">
               <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4">
                 {slide.content}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import "../../css/slider.css";
@@ -10,7 +10,6 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const dropdownRef = useRef(null);
 
   // Toggle mobile menu
   const toggleMenu = () => {
@@ -22,42 +21,26 @@ export default function Header() {
     }
   };
 
-  // Toggle dropdown
-  const toggleDropdown = (e) => {
-    e.preventDefault();
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  // Close mobile menu and dropdown
-  const closeMenu = () => {
+  // Close mobile menu when navigating to another page
+  useEffect(() => {
     setIsOpen(false);
     setIsDropdownOpen(false);
     document.body.style.overflow = "";
-  };
-
-  useEffect(() => {
-    closeMenu();
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // Toggle dropdown for mobile
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md z-10">
       <nav className="bg-white border-gray-200 dark:border-gray-600">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <div className="flex flex-wrap justify-between items-center mx-auto py-4 container">
           <Link
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse lg:-ml-10 -ml-0"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src="/image_1.png" className="h-8" alt="Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
@@ -67,10 +50,8 @@ export default function Header() {
 
           <button
             onClick={toggleMenu}
-            data-collapse-toggle="mega-menu-full-cta"
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-            aria-controls="mega-menu-full-cta"
             aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
@@ -107,19 +88,21 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li className="relative">
-                <Link
-                  href="/what-we-do"
-                  className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
-                >
+              {/* What we do with dropdown toggle for mobile */}
+              <li
+                className="relative md:group"
+                onClick={toggleDropdown}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <button className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
                   What we do
                   <svg
-                    className="w-2.5 h-2.5 ms-3 cursor-pointer"
+                    className="w-2.5 h-2.5 ms-3"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 10 6"
-                    onClick={toggleDropdown}
                   >
                     <path
                       stroke="currentColor"
@@ -129,15 +112,15 @@ export default function Header() {
                       d="m1 1 4 4 4-4"
                     />
                   </svg>
-                </Link>
+                </button>
 
-                {/* Dropdown Menu */}
+                {/* Dropdown menu with single-column layout on mobile */}
                 {isDropdownOpen && (
-                  <div className="menu-drop-res" ref={dropdownRef}>
-                    <ul className="absolute left-0 z-10 mt-2 bg-gray-200 border-gray-200 shadow-sm p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-max">
+                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1">
+                    <ul className="md:grid md:grid-cols-3 gap-4 flex flex-col">
                       <li>
                         <Link
-                          href="#"
+                          href="/consulting"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Consulting
@@ -145,7 +128,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/what-we-do"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Marketing & Lead Gen
@@ -153,25 +136,23 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/cfo"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           CFO-as-a-service  
                         </Link>
                       </li>
-
                       <li>
                         <Link
-                          href="#"
+                          href="/hr"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           HR, Staffing
                         </Link>
                       </li>
-
                       <li>
                         <Link
-                          href="#"
+                          href="/it-support-management"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           IT Support & Management
@@ -179,7 +160,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/procurement"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Procurement
@@ -187,7 +168,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/legal"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Legal as a services
@@ -195,7 +176,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/corporate"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Corporate gifting
@@ -203,7 +184,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/market-research"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
                           Market Research
@@ -211,10 +192,10 @@ export default function Header() {
                       </li>
                       <li>
                         <Link
-                          href="#"
+                          href="/customer-support"
                           className="block py-1 px-3 text-black hover:bg-gray-100"
                         >
-                          Customer
+                          Customer Support
                         </Link>
                       </li>
                     </ul>
@@ -246,7 +227,6 @@ export default function Header() {
                   About
                 </Link>
               </li>
-
               <li>
                 <Link
                   href="/contact"

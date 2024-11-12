@@ -7,7 +7,7 @@ const Hr = () => {
   return (
     <div>
       <div className="mt-9 container m-auto">
-        <section className="flex flex-col items-center justify-center p-8  res-desktop px-4-5 ">
+        <section className="flex flex-col items-center justify-center py-8  res-desktop ">
           <div className="p-6 flex flex-col md:flex-row items-center w-full container marketing">
             <div className=" h-56 w-full md:w-1/3   mb-4 md:mb-0 md:mr-6 bg-white">
               <h2 className="text-2xl font-bold text-black">

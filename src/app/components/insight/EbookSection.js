@@ -3,7 +3,7 @@ export default function EbookSection() {
   return (
     <div className="w-full">
       <div className="container m-auto ">
-        <section className="flex flex-col items-center justify-center p-8 bg-white">
+        <section className="flex flex-col items-center justify-center py-8 bg-white">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-black mb-2">
               CFaas Offerings E-books

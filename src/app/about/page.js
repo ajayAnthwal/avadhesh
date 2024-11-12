@@ -13,13 +13,13 @@ const About = () => {
           backgroundPosition: "right",
         }}
       >
-        <div className="px-4 md:px-16 text-left text-black container mx-auto">
+        <div className="text-left text-black container mx-auto">
           <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
             About Us
           </h3>
         </div>
       </div>
-      <div className="container mx-auto my-6 px-4-5">
+      <div className="container mx-auto my-6">
         <h2 className="text-center text-2xl font-bold mb-4">
           Know more about us & explore the story of <br /> how can we help you
         </h2>
@@ -47,7 +47,7 @@ const About = () => {
       {/* section  */}
       <div className="w-full">
         <img src="./Vector (2).png" alt="img" className="w-full" />
-        <div className="w-full  px-4-5 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+        <div className="w-full  bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
           <div className="container m-auto">
             <div className="text-center w-full mx-auto">
               <h2 className="text-center text-2xl font-bold mb-4">

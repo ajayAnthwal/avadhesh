@@ -12,7 +12,8 @@ const Hr_insights = () => {
     {
       imgSrc: "/Blog-2.png",
       title: "Strategies For Attracting Top Talents",
-      description: "Know about the winning strategies to attract the best of talents.",
+      description:
+        "Know about the winning strategies to attract the best of talents.",
     },
     {
       imgSrc: "/Blog-3.png",
@@ -31,11 +32,12 @@ const Hr_insights = () => {
               Recommended HR Insights
             </h1>
             <p className="text-center text-lg mb-8">
-              Discover expert HR tips and insights in our <br /> blogs to elevate your workforce today!
+              Discover expert HR tips and insights in our <br /> blogs to
+              elevate your workforce today!
             </p>
 
-            <div className="flex justify-center px-4 w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-screen-xl">
+            <div className="flex justify-center w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                 {cards.map((card, index) => (
                   <BlogCard key={index} card={card} />
                 ))}

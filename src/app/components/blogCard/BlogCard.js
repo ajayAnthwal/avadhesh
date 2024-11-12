@@ -13,6 +13,9 @@ const BlogCard = ({ card }) => {
         />
       </div>
       <div className="p-4">
+        <button className="btn-small bg-black text-white rounded flex m-auto py-1 px-3 mb-4">
+          Blog
+        </button>
         <h3 className="text-xl font-semibold mb-2 text-left">{card.title}</h3>
         <p className="text-gray-600 text-left">{card.description}</p>
       </div>

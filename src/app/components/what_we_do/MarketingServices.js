@@ -63,7 +63,7 @@ const MarketingServices = () => {
           </p>
         </div>
         {/* Adjust the grid to display all 8 services */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto px-4-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

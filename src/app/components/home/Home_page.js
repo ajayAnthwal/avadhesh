@@ -5,7 +5,7 @@ import "../../css/slider.css";
 const HomePage = () => {
   return (
     <>
-      <div className="container mx-auto my-6 px-4 lg:px-20 mt-14">
+      <div className="container mx-auto my-6 mt-14">
         <div className="flex flex-col md:flex-row gap-6 justify-between">
           <div
             className="flex justify-center items-center"
@@ -47,7 +47,7 @@ const HomePage = () => {
         height={1080}
       />
       <div className="hero top-section bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] py-12">
-        <div className="container mx-auto px-4 lg:px-20 text-center">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-center about-title text-4xl font-bold mb-6">
             Latest Highlight
           </h1>
