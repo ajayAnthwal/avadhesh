@@ -25,7 +25,13 @@ const Hr_insights = () => {
   return (
     <div className="w-full">
       <div className="mt-7">
-        <img src="./Vector (2).png" alt="img" className="w-full" />
+        <Image
+          src="/Vector (2).png"
+          alt="img"
+          className="w-full"
+          width={1200} // Set appropriate width for the image
+          height={400} // Set appropriate height for the image
+        />
         <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
           <div className="container mx-auto">
             <h1 className="text-center text-3xl font-bold mb-6">

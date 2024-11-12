@@ -141,7 +141,14 @@ const AvatarsSection = () => {
 
   return (
     <>
-      <img src="./Vector (1).png" alt="img" className="w-full" />
+      <Image
+        src="/Vector (1).png"
+        alt="Background"
+        width={1920}
+        height={1080}
+        className="w-full"
+        priority
+      />
       <section className="py-12 bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] px-4-5">
         <div className="container mx-auto text-center">
           <h2 className="text-xl font-bold mb-6">Meet the AvaStars</h2>

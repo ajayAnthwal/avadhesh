@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import Image from "next/image";
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -39,7 +40,14 @@ export default function FAQ() {
 
   return (
     <>
-      <img src="./Vector (2).png" alt="img" className="w-full" />
+      <Image
+        src="/Vector (2).png"
+        alt="img"
+        layout="responsive"
+        width={1000}
+        height={300}
+        className="w-full"
+      />
       <div className="py-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-8">

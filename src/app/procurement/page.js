@@ -90,11 +90,13 @@ const Procurement = () => {
             </div>
             <div className="flex flex-col justify-between w-full md:w-2/3 -mt-10">
               <p className="text-black text-justify">
-                <strong>Your procurement needs, delivered.</strong>Whether it's
-                IT hardware, software, facilities, or accessories, we ensure you
-                get the right solutions, on time and within budget. Curious how
-                we can simplify and optimize your procurement process?
+                <strong>Your procurement needs, delivered.</strong>Whether
+                it&#39;s IT hardware, software, facilities, or accessories, we
+                ensure you get the right solutions, on time and within budget.
+                Curious how we can simplify and optimize your procurement
+                process?
               </p>
+
               <br />
               <p className="text-black text-justify">
                 Explore how our tailored services are designed to meet your

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import "../../css/slider.css";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,13 @@ export default function Header() {
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/image_1.png" className="h-8" alt="Logo" />
+            <Image
+              src="/image_1.png"
+              alt="Logo"
+              className="h-8"
+              width={32} // Specify width and height for the image
+              height={32} // Adjust to fit your needs
+            />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
               Avadhesh
             </span>
@@ -116,7 +123,7 @@ export default function Header() {
 
                 {/* Dropdown menu with single-column layout on mobile */}
                 {isDropdownOpen && (
-                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1">
+                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1" style={{ marginTop: "-1px" }}>
                     <ul className="md:grid md:grid-cols-3 gap-4 flex flex-col">
                       <li>
                         <Link

@@ -50,7 +50,14 @@ const RotateBox = () => {
 
   return (
     <>
-      <img src="./Vector (2).png" alt="Vector Image" className="w-full" />
+      <Image
+        src="/Vector (2).png"
+        alt="Vector Image"
+        layout="responsive"
+        width={800}
+        height={600}
+        className="w-full"
+      />
       <div className="hero top-section bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] relative">
         <div className="container-cards text-center w-full px-4 mx-auto py-8 relative">
           <h1 className="text-center about-title text-4xl font-bold mb-4">
@@ -66,8 +73,7 @@ const RotateBox = () => {
             className="relative border border-black w-full mx-auto"
             style={{ background: "#FFB055" }}
           >
-          <div className="relative w-full mx-auto overflow-hidden container sm:max-w-screen-xl md:max-w-screen-2xl">
-
+            <div className="relative w-full mx-auto overflow-hidden container sm:max-w-screen-xl md:max-w-screen-2xl">
               <div className="flex items-center justify-between p-4 flex-col sm:flex-row">
                 <button
                   className="bg-gray-600 text-white p-2 rounded-full mb-4 sm:mb-0"

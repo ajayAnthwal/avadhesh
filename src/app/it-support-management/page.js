@@ -88,7 +88,7 @@ const it_support_management = () => {
               <p className="text-gray-500 text-sm">
                 Our
                 <span className="font-semibold ml-2 mr-2">
-                  CFaaS<sup>SM</sup>
+                  CFaaS<sup>&#39;SM</sup>
                 </span>
                 offering
               </p>
@@ -111,11 +111,12 @@ const it_support_management = () => {
             </div>
             <div className="flex flex-col justify-between w-full md:w-2/3 -mt-10">
               <p className="text-black text-justify">
-                <strong>Innovation starts with reliable IT.</strong>Whether it's
-                managing your cloud, securing your data, or driving innovation
-                with AI and DevOps, we’re committed to making your IT work
-                harder for you.
+                <strong>Innovation starts with reliable IT.</strong> Whether
+                it&#39;s managing your cloud, securing your data, or driving
+                innovation with AI and DevOps, we&#39;re committed to making
+                your IT work harder for you.
               </p>
+
               <br />
               <p className="text-black text-justify">
                 Ready to experience seamless support and tailored solutions?

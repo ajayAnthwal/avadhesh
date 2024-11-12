@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import Sliders from "../components/sliders/sliders";
 import Team from "../components/about_us/Team";
 import AvatarsSection from "../components/about_us/AvatarsSection";
+
 const About = () => {
   return (
     <div>
@@ -39,22 +41,28 @@ const About = () => {
               With a strong outcome-driven approach, we mutually define goals
               that deliver measurable results. Our investment in proprietary
               assets and adaptable commercial models ensures you stay relevant
-              and competitive in today’s fast-paced market. 
+              and competitive in today’s fast-paced market.
             </p>
           </div>
         </div>
       </div>
-      {/* section  */}
+      {/* Section */}
       <div className="w-full">
-        <img src="./Vector (2).png" alt="img" className="w-full" />
-        <div className="w-full  bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+        <Image
+          src="/Vector (2).png"
+          alt="img"
+          layout="responsive"
+          width={1000}
+          height={200}
+        />
+        <div className="w-full bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
           <div className="container m-auto">
             <div className="text-center w-full mx-auto">
               <h2 className="text-center text-2xl font-bold mb-4">
                 Your Partner-in-Growth
               </h2>
               <div className="mx-auto mt-12">
-                <div className="flex flex-col md:flex-row gap-6 justify-between ">
+                <div className="flex flex-col md:flex-row gap-6 justify-between">
                   <div
                     className="flex justify-center items-center md:justify-start w-full md:w-1/2 video-play"
                     style={{ backgroundColor: "#D9D9D9" }}
@@ -62,8 +70,8 @@ const About = () => {
                     <div className="w-2/3 md:w-full">
                       <div className="max-w-sm mx-auto">
                         <div className="flex flex-col items-center justify-center">
-                          <img
-                            src="./play.png"
+                          <Image
+                            src="/play.png"
                             alt="Play Button"
                             width={47}
                             height={37}
@@ -78,7 +86,7 @@ const About = () => {
                   </div>
                   <div className="w-full md:w-1/2">
                     <h2 className="text-left text-2xl font-bold mb-4">
-                      Augment. Amplify. Accelerate. 
+                      Augment. Amplify. Accelerate.
                     </h2>
                     <p className="text-justify">
                       At AvadheshCo, we Augment your operations to achieve
@@ -88,7 +96,7 @@ const About = () => {
                       first CFaaS (Corporate Functions as a Service) provider,
                       we offer flexible solutions to drive growth and
                       efficiency, positioning ourselves as your trusted partner
-                      in long-term success.  
+                      in long-term success.
                     </p>
                   </div>
                 </div>
