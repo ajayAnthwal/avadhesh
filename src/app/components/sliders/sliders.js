@@ -75,18 +75,23 @@ const Sliders = () => {
         </div>
       ))}
 
-      <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full hover:bg-gray-200 focus:outline-none"
-        onClick={prevSlide}
-      >
-        <MdKeyboardArrowLeft size={24} />
-      </button>
-      <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full hover:bg-gray-200 focus:outline-none"
-        onClick={nextSlide}
-      >
-        <MdKeyboardArrowRight size={24} />
-      </button>
+<button
+    className="absolute left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full focus:outline-none z-20
+               top-[80%] md:top-1/2"
+    onClick={prevSlide}
+  >
+    <MdKeyboardArrowLeft size={24} />
+  </button>
+
+  {/* Right Arrow */}
+  <button
+    className="absolute right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full focus:outline-none z-20
+               top-[80%] md:top-1/2"
+    onClick={nextSlide}
+  >
+    <MdKeyboardArrowRight size={24} />
+  </button>
+
       <div className="absolute bottom-4 left-6 flex space-x-2">
         {slides.map((_, index) => (
           <span

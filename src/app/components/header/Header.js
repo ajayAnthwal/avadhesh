@@ -123,7 +123,7 @@ export default function Header() {
 
                 {/* Dropdown menu with single-column layout on mobile */}
                 {isDropdownOpen && (
-                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1" style={{ marginTop: "-1px" }}>
+                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1 menu-res" style={{ marginTop: "-1px"}}>
                     <ul className="md:grid md:grid-cols-3 gap-4 flex flex-col">
                       <li>
                         <Link

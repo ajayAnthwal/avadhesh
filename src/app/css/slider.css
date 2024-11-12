@@ -284,6 +284,17 @@ footer .bi:hover {
   margin-left: 11%;
 }
 
+.menu-res {
+  margin-top: -1px;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .menu-res {
+    margin-left: -230px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .menu-drop-res {
     position: absolute;
