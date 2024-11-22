@@ -54,7 +54,7 @@ const Carousel = () => {
         }}
       >
         <div className=" text-left text-black container mx-auto">
-          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
+          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4 pl-6"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
             Contact Us
           </h3>
         </div>

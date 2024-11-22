@@ -5,6 +5,7 @@ import Case_study from "../components/insight/Case_Studies";
 import IndustriesServed from "../components/insight/IndustriesServed";
 import BlogCard from "../components//blogCard/BlogCard";
 import Image from "next/image";
+import Link from "next/link";
 
 const Insights = () => {
   const cards = [
@@ -30,10 +31,10 @@ const Insights = () => {
       imgSrc: "/Blog.png",
     },
   ];
-  
+
   return (
     <div>
-       <div
+      <div
         className="relative w-full h-[300px] md:h-[500px] flex items-center"
         style={{
           backgroundImage: "url('/Insights.png')",
@@ -42,10 +43,9 @@ const Insights = () => {
         }}
       >
         <div className="text-left text-black container mx-auto">
-          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
-          Insights
+          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4 pl-6"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+            Insights
           </h3>
-         
         </div>
       </div>
       <div className="flex items-center justify-center bg-white m-auto container">
@@ -69,7 +69,6 @@ const Insights = () => {
 
       <EbookSection />
       <Case_study />
-     
 
       <div className="w-full">
         <Image
@@ -82,9 +81,8 @@ const Insights = () => {
       </div>
 
       <div className="bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] res-desktop">
-        
         <div className="container flex flex-col items-center py-12 mx-auto">
-        <IndustriesServed />
+          <IndustriesServed />
           <div className="text-center mb-12 max-w-4xl">
             <h1 className="text-center about-title text-4xl font-bold mb-6">
               Have Questions?
@@ -92,14 +90,14 @@ const Insights = () => {
             <button className="btn-gray-call mb-4">
               Schedule a call with us
             </button>
-            <p className="paragraph">
-              <a
+            <div className="paragraph">
+              <Link
                 href="#"
                 className="text-dark text-decoration-underline call-paragraph"
               >
                 Click on the FAQs page to know more about how we can help you?
-              </a>
-            </p>
+              </Link>
+            </div>
           </div>
         </div>
         <hr />

@@ -6,6 +6,7 @@ import Marketing_insights from "@/app/components/what_we_do/Marketing_insights";
 import CFaaS from "../components/cfaas/CFaaS";
 import ServiceCard from "../components/service_card/ServiceCard";
 import BlogCard from "../components/blogCard/BlogCard";
+import Link from "next/link";
 
 const it_support_management = () => {
   const services = [
@@ -78,14 +79,14 @@ const it_support_management = () => {
   return (
     <div>
       <div className="mt-9 container mx-auto">
-        <section className="flex flex-col items-center justify-center py-8 res-desktop">
-          <div className="p-6 flex flex-col md:flex-row items-center w-full container marketing">
+        <section className="flex flex-col justify-center py-8 res-desktop">
+          <div className="p-6 flex flex-col md:flex-row  w-full container marketing">
             <div className="h-56 w-full md:w-1/3 mb-4 md:mb-0 md:mr-6 bg-white">
-              <h2 className="text-2xl font-bold text-black">
+              <h2 className="text-2xl font-bold text-black marketing-heading"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
                 IT Support & Management
               </h2>
-              <p className="text-black">as a service</p>
-              <p className="text-gray-500 text-sm">
+             
+              <p className="text-gray-500 text-sm marketing-span">
                 Our
                 <span className="font-semibold ml-2 mr-2">
                   CFaaS<sup>&#39;SM</sup>
@@ -104,13 +105,14 @@ const it_support_management = () => {
                     borderRadius: "20px",
                     border: "1px solid black",
                   }}
+                   className="marketing-btn"
                 >
                   Transform Your Tech Today
                 </button>
               </div>
             </div>
-            <div className="flex flex-col justify-between w-full md:w-2/3 -mt-10">
-              <p className="text-black text-justify">
+            <div className="flex flex-col justify-between w-full md:w-2/3">
+              <p className="text-black text-justify marketing-description">
                 <strong>Innovation starts with reliable IT.</strong> Whether
                 it&#39;s managing your cloud, securing your data, or driving
                 innovation with AI and DevOps, we&#39;re committed to making
@@ -118,7 +120,7 @@ const it_support_management = () => {
               </p>
 
               <br />
-              <p className="text-black text-justify">
+              <p className="text-black text-justify marketing-description">
                 Ready to experience seamless support and tailored solutions?
                 Explore how we can elevate your technology to new heights. 
               </p>
@@ -140,7 +142,7 @@ const it_support_management = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
+            className="bg-black bg-cover bg-center h-[21rem] rounded-lg shadow-md group"
             style={{
               backgroundImage: `url(${service.imageUrl})`,
             }}
@@ -151,7 +153,7 @@ const it_support_management = () => {
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-lg text-white text-left">
+                  <p className="text-lg text-white text-left relative top-[115px]">
                     {service.description}
                   </p>
                 </div>
@@ -195,14 +197,14 @@ const it_support_management = () => {
               <button className="btn-gray-call mb-4">
                 Schedule a call with us
               </button>
-              <p className="paragraph">
-                <a
-                  href="#"
-                  className="text-dark text-decoration-underline call-paragraph"
-                >
-                  Click on the FAQs page to know more about how we can help you?
-                </a>
-              </p>
+              <div className="paragraph">
+              <Link
+                href="#"
+                className="text-dark text-decoration-underline call-paragraph"
+              >
+                Click on the FAQs page to know more about how we can help you?
+              </Link>
+            </div>
             </div>
           </div>
         </div>

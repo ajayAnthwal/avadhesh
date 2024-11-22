@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../../css/slider.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 const RotateBox = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -124,14 +125,14 @@ const RotateBox = () => {
             <button className="btn-gray-call mb-4">
               Schedule a call with us
             </button>
-            <p className="paragraph">
-              <a
+            <div className="paragraph">
+              <Link
                 href="#"
                 className="text-dark text-decoration-underline call-paragraph"
               >
                 Click on the FAQs page to know more about how we can help you?
-              </a>
-            </p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -47,12 +47,14 @@ export default function Header() {
               src="/image_1.png"
               alt="Logo"
               className="h-8"
-              width={32} // Specify width and height for the image
-              height={32} // Adjust to fit your needs
+              width={32} 
+              height={32} 
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
-              Avadhesh
-            </span>
+            <Link href="/">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
+                Avadhesh
+              </span>
+            </Link>
           </Link>
 
           <button
@@ -86,23 +88,23 @@ export default function Header() {
             } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           >
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
-              <li>
+              {/* <li>
                 <Link
                   href="/"
                   className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Home
                 </Link>
-              </li>
+              </li> */}
 
               {/* What we do with dropdown toggle for mobile */}
               <li
-                className="relative md:group"
+                className="relative md:group font-bold"
                 onClick={toggleDropdown}
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <button className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
+                <button className="font-bold flex items-center justify-between w-full py-2 px-3  text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
                   What we do
                   <svg
                     className="w-2.5 h-2.5 ms-3"
@@ -123,12 +125,15 @@ export default function Header() {
 
                 {/* Dropdown menu with single-column layout on mobile */}
                 {isDropdownOpen && (
-                  <div className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1 menu-res" style={{ marginTop: "-1px"}}>
+                  <div
+                    className="absolute left-0 z-10 bg-gray-200 border-gray-200 shadow-sm p-2 md:w-max w-full mt-1 menu-res"
+                    style={{ marginTop: "-1px" }}
+                  >
                     <ul className="md:grid md:grid-cols-3 gap-4 flex flex-col">
                       <li>
                         <Link
                           href="/consulting"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Consulting
                         </Link>
@@ -136,7 +141,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/what-we-do"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Marketing & Lead Gen
                         </Link>
@@ -144,7 +149,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/cfo"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           CFO-as-a-service  
                         </Link>
@@ -152,7 +157,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/hr"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           HR, Staffing
                         </Link>
@@ -160,7 +165,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/it-support-management"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           IT Support & Management
                         </Link>
@@ -168,7 +173,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/procurement"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Procurement
                         </Link>
@@ -176,7 +181,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/legal"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Legal as a services
                         </Link>
@@ -184,7 +189,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/corporate"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Corporate gifting
                         </Link>
@@ -192,7 +197,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/market-research"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Market Research
                         </Link>
@@ -200,7 +205,7 @@ export default function Header() {
                       <li>
                         <Link
                           href="/customer-support"
-                          className="block py-1 px-3 text-black hover:bg-gray-100"
+                          className="block py-1 px-3 text-black hover:bg-gray-100 font-bold"
                         >
                           Customer Support
                         </Link>
@@ -213,7 +218,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/insights"
-                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="font-bold block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Insights
                 </Link>
@@ -221,7 +226,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/hr"
-                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="font-bold block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Careers
                 </Link>
@@ -229,7 +234,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="font-bold block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   About
                 </Link>
@@ -237,7 +242,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  className="font-bold block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 >
                   Contact Us
                 </Link>

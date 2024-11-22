@@ -58,8 +58,7 @@ const MarketingServices = () => {
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Our Marketing Services</h2>
           <p className="text-gray-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+          Unlock growth through targeted marketing, compelling content, and impactful brand strategies. 
           </p>
         </div>
         {/* Adjust the grid to display all 8 services */}
@@ -67,7 +66,7 @@ const MarketingServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
+              className="bg-black bg-cover bg-center h-[21rem] rounded-lg shadow-md group"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
                 backgroundSize: "cover",
@@ -80,7 +79,7 @@ const MarketingServices = () => {
                     {service.title}
                   </h3>
                   <div className="px-5">
-                    <p className="text-lg text-white text-left">
+                    <p className="text-lg text-white text-left relative top-[115px]">
                       {service.description}
                     </p>
                   </div>

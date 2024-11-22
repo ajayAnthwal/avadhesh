@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import "../../css/slider.css";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -26,7 +27,7 @@ const HomePage = () => {
             <h2 className="text-left text-2xl font-bold mb-4">
               Augment. Amplify. Accelerate. 
             </h2>
-            <p className="text-justify">
+            <p className="text-justify hero-description">
               At AvadheshCo, we Augment your operations to achieve excellence
               and reduce costs. We Amplify business outcomes to maximize ROI and
               Accelerate success by streamlining processes and eliminating
@@ -57,63 +58,82 @@ const HomePage = () => {
           <div className="flex flex-col lg:flex-row gap-10">
             <div className="lg:w-1/3 mb-4 lg:mb-0">
               <div
-                className="left-panel flex flex-col h-full p-4 bg-gray-300 shadow-lg bg-cover bg-center"
+                className="flex flex-col h-full p-4 bg-gray-300 shadow-lg bg-cover bg-center"
                 style={{
                   backgroundImage:
                     "url('abstract-backdrop-with-multi-colored-pattern-futuristic-motion-generated-by-ai.jpg')",
                 }}
               >
-                <div className="content text-lg landing">
+                <div className="content text-lg">
                   <Image
-                    src="/geometric-abstract-design-with-minimalistic-shapes-neutral-background.jpg" 
+                    src="/geometric-abstract-design-with-minimalistic-shapes-neutral-background.jpg"
                     alt="image"
-                    width={500} 
-                    height={282} 
-                    layout="responsive" 
-                    priority 
+                    width={500}
+                    height={282}
+                    layout="responsive"
+                    priority
+                    className="rounded-2xl"
                   />
-                 
                 </div>
-                <p className="text-white"> Get a CFaaS Offering E-book</p>
+
+                <h2 className="text-white text-[26px] mt-4 text-center"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                  Get a CFaaS Offering E-book
+                </h2>
+
+                <div className="flex-grow"></div>
+
+                <button className="px-6 py-3 w-2/4 flex justify-center items-center mx-auto font-semibold text-black bg-white rounded-2xl hover:bg-gray-100">
+                  Get Your Copy
+                </button>
               </div>
             </div>
 
-            <div className="lg:w-3/4">
+            <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Card 1 */}
                 <div
-                  className="box h-72 bg-white rounded-md shadow-lg relative"
+                  className="relative h-72 bg-white rounded-md shadow-lg"
                   style={{
                     backgroundImage: "url('/Highlight-section-1.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "top",
                   }}
                 >
-                  <div className="absolute top-4 left-12 text-white m-auto text-lg font-semibold">
+                  <div className="absolute top-4 left-3 text-white text-2xl font-semibold"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
                     Learn to Manage Imposter Syndrome
                   </div>
                 </div>
 
-                <div className="box h-72 bg-purple-500 rounded-md shadow-lg flex items-center justify-center">
-                  <div className="text-black text-lg font-semibold">
+                {/* Card 2 */}
+                <div className="h-72 bg-purple-500 rounded-md shadow-lg flex flex-col justify-between p-4">
+                  <div className="text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
                     Brand Your Armor for 2024 and Beyond
                   </div>
-                </div>
-
-                <div className="box h-72 bg-orange-500 rounded-md shadow-lg flex items-center justify-center">
-                  <div className="text-black text-lg font-semibold">
-                    Amplify Your Tech Journey
+                  <div className="text-black text-[20px] text-left font-medium"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                    Learn More &gt;
                   </div>
                 </div>
 
+                {/* Card 3 */}
+                <div className="h-72 bg-orange-500 rounded-md shadow-lg flex flex-col justify-between p-4">
+                  <div className="text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                    Amplify Your Tech Journey
+                  </div>
+                  <div className="text-black text-[20px] text-left font-medium"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                    Learn More &gt;
+                  </div>
+                </div>
+
+                {/* Card 4 */}
                 <div
-                  className="box h-72 bg-white rounded-md shadow-lg relative"
+                  className="relative h-72 bg-white rounded-md shadow-lg"
                   style={{
                     backgroundImage: "url('/Highlight-section-2.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 >
-                  <div className="absolute top-4 left-12 text-black text-lg font-semibold">
+                  <div className="absolute top-4 left-3 text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
                     Content Marketing for Google Algorithm or for Your Readers?
                   </div>
                 </div>

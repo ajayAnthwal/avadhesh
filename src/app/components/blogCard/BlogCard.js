@@ -3,7 +3,7 @@ import Image from "next/image";
 const BlogCard = ({ card }) => {
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden">
-      <div className="relative h-72 w-full">
+      <div className="relative h-auto w-full">
         <Image
           src={card.imgSrc}
           alt={card.title}

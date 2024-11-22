@@ -7,14 +7,14 @@ const Case_study = () => {
       id: 1,
       title: "Business Growth Event",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+        "Strategic event uniting CISOs to discuss SIEM management challenges and priorities in the Indian context. ",
       imgSrc: "/human-hand-holding-dollar-bills-with-increased-graph-arrow.jpg",
     },
     {
       id: 2,
       title: "Cloud Calling",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.",
+        "7-month campaign reaching remote India, connecting thousands to AWS cloud solutions through dedicated sales efforts ",
       imgSrc: "/handshake-human-robot.jpg",
     },
   ];
@@ -28,9 +28,8 @@ const Case_study = () => {
               Case Studies
             </h1>
             <p className="text-center text-lg mb-8">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              <br />
-              industry. Lorem Ipsum has been the industry standard.
+              Explore real stories of growth, innovation, and impact <br />{" "}
+              through our tailored corporate solutions. 
             </p>
 
             <div className="flex justify-center px-4 w-full pb-9">
@@ -50,8 +49,12 @@ const Case_study = () => {
                       />
                     </div>
                     <div className="text-center">
-                      <h2 className="text-xl font-bold mb-2 text-left">{study.title}</h2>
-                      <p className="text-gray-600 text-left">{study.description}</p>
+                      <h2 className="text-xl font-bold mb-2 text-left">
+                        {study.title}
+                      </h2>
+                      <p className="text-gray-600 text-left">
+                        {study.description}
+                      </p>
                     </div>
                   </div>
                 ))}

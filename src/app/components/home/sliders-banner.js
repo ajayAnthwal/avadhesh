@@ -1,5 +1,6 @@
 
 import Slider from "../components/Sliders/Slider";
+import Link from "next/link";
 
 const Slider_banner = () => {
   const slides = [

@@ -1,6 +1,7 @@
 import React from "react";
 import BlogCard from "../blogCard/BlogCard";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hr_insights = () => {
   const cards = [
@@ -59,14 +60,14 @@ const Hr_insights = () => {
               <button className="btn-gray-call mb-4">
                 Schedule a call with us
               </button>
-              <p className="paragraph">
-                <a
-                  href="#"
-                  className="text-dark text-decoration-underline call-paragraph"
-                >
-                  Click on the FAQs page to know more about how we can help you?
-                </a>
-              </p>
+              <div className="paragraph">
+              <Link
+                href="#"
+                className="text-dark text-decoration-underline call-paragraph"
+              >
+                Click on the FAQs page to know more about how we can help you?
+              </Link>
+            </div>
             </div>
           </div>
         </section>

@@ -117,12 +117,14 @@
 }
 
 .landing {
-  background: white;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ border: 1px solid whitesmoke;
+ border-radius: 10px;
 }
+
+.landing img {
+  border-radius: 10px;
+ }
+
 
 .rotated-box {
   width: 200px;

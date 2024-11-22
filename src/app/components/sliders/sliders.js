@@ -64,7 +64,7 @@ const Sliders = () => {
         >
           <div className="flex items-center h-full px-6 container mx-auto">
             <div className="text-left text-black">
-              <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold mb-4"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
                 {slide.content}
               </h3>
               <button className="mt-4 px-4 py-2 bg-white text-black border border-black rounded-md text-sm md:text-base">

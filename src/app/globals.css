@@ -17,9 +17,10 @@
 }
 
 body {
- margin: 0;
- padding: 0;
- scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif !important;
 }
 
 @layer utilities {
@@ -27,7 +28,6 @@ body {
     text-wrap: balance;
   }
 }
-
 
 .btn-gray {
   height: 35px;
@@ -43,4 +43,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.marketing-heading{
+font-size: 38px;
+}
+
+.marketing-description{
+font-size: 30px;
+}
+
+.hero-description{
+  font-size: 25px;
+  }
+
+.marketing-span{
+  font-size: 25px;
+  margin-top: 20px;
+  }
+
+.marketing-btn{
+font-size: 21px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .marketing-heading{
+    font-size: 24px;
+    }
+    
+    .marketing-description{
+    font-size: 18px;
+    }
+    
+    .marketing-span{
+      font-size: 16px;
+      margin-top: 20px;
+      }
+    
+    .marketing-btn{
+    font-size: 16px;
+    }
+
+    .hero-description{
+      font-size: 18px;
+      }
+
+      .bottom-service-hr {
+        width: 100%;
+    }
+    
 }

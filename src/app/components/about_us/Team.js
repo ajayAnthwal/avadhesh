@@ -126,8 +126,7 @@ const Team = () => {
                 Integrated Approach
               </h3>
               <p className="text-left">
-                We engage with our customers in various commercial models
-                including short, long term, and transaction-based pricing.
+              We leverage multiple mediums & functional capabilities to achieve the desired outcomes
               </p>
             </div>
           </div>

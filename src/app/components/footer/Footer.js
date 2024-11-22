@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
+import Link from "next/link"; 
 import "../../css/slider.css";
 
 const Footer = () => {
@@ -11,19 +12,22 @@ const Footer = () => {
             <h6 className="text-lg font-semibold mb-4">Reach us</h6>
             <p className="flex items-start justify-center md:justify-start mb-2">
               <Image
-                src="/location.png" // Assuming location.png is in the public folder
+                src="/location.png"
                 alt="Location"
                 width={20}
                 height={20}
                 className="mr-2 mt-1"
               />
               <span>
-                Avadhesh India Advisory Services LLP <br/> Plot No. 1625, Sri Sai Towers, Venkata <br/> Ramana Colony, KPHB, Hyderabad, <br/> Telangana- 500085
+                Avadhesh India Advisory Services LLP <br />
+                Plot No. 1625, Sri Sai Towers, Venkata <br />
+                Ramana Colony, KPHB, Hyderabad, <br />
+                Telangana- 500085
               </span>
             </p>
             <p className="flex items-center justify-center md:justify-start mb-2">
               <Image
-                src="/call.png" // Update with correct path
+                src="/call.png"
                 alt="Call"
                 width={20}
                 height={20}
@@ -33,7 +37,7 @@ const Footer = () => {
             </p>
             <p className="flex items-center justify-center md:justify-start">
               <Image
-                src="/email.png" // Update with correct path
+                src="/email.png"
                 alt="Email"
                 width={20}
                 height={20}
@@ -47,29 +51,29 @@ const Footer = () => {
             <h6 className="text-lg font-semibold mb-4">Insights</h6>
             <ul className="list-none space-y-2">
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Client Stories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Industry Stories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Growth Strategies
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Cloud
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Sales
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -78,14 +82,14 @@ const Footer = () => {
             <h6 className="text-lg font-semibold mb-4">Info</h6>
             <ul className="list-none space-y-2">
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Terms and Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-600">
+                <Link href="#" className="text-gray-800 hover:text-gray-600">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -94,30 +98,30 @@ const Footer = () => {
         <div className="text-center mt-9">
           <b className="text-lg">Let’s get social</b>
           <div className="flex justify-center space-x-4 mt-4">
-            <a href="#">
+            <Link href="#">
               <Image
-                src="/instagram.png" // Update with correct path
+                src="/instagram.png"
                 alt="Instagram"
                 width={24}
                 height={24}
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <Image
-                src="/facebook.png" // Update with correct path
+                src="/facebook.png"
                 alt="Facebook"
                 width={24}
                 height={24}
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <Image
-                src="/linked_in.png" // Update with correct path
+                src="/linked_in.png"
                 alt="LinkedIn"
                 width={24}
                 height={24}
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

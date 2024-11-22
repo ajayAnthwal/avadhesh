@@ -40,15 +40,15 @@ const HrStaffingWellBeing = () => {
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold">HR, Staffing & Well Being</h2>
         <p className="text-gray-500">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Enhance workplace success with our holistic HR solutions <br /> for
+          operations, staffing, and well-being. 
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[100%] mx-auto container">
         {services.slice(0, 3).map((service, index) => (
           <div
             key={index}
-            className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
+            className="bg-black bg-cover bg-center h-[21rem] rounded-lg shadow-md group"
             style={{
               backgroundImage: `url(${service.imageUrl})`,
               backgroundSize: "cover",
@@ -61,7 +61,7 @@ const HrStaffingWellBeing = () => {
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-lg text-white text-left">
+                  <p className="text-lg text-white text-left relative top-[115px]">
                     {service.description}
                   </p>
                 </div>
@@ -74,7 +74,7 @@ const HrStaffingWellBeing = () => {
         {services.slice(3, 5).map((service, index) => (
           <div
             key={index}
-            className="bg-black bg-cover bg-center h-64 rounded-lg shadow-md group"
+            className="bg-black bg-cover bg-center h-[21rem] rounded-lg shadow-md group"
             style={{
               backgroundImage: `url(${service.imageUrl})`,
               backgroundSize: "cover",
@@ -87,7 +87,7 @@ const HrStaffingWellBeing = () => {
                   {service.title}
                 </h3>
                 <div className="px-5">
-                  <p className="text-lg text-white text-left">
+                  <p className="text-lg text-white text-left relative top-[115px]">
                     {service.description}
                   </p>
                 </div>

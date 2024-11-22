@@ -3,6 +3,7 @@ import Image from "next/image";
 import Sliders from "../components/sliders/sliders";
 import Team from "../components/about_us/Team";
 import AvatarsSection from "../components/about_us/AvatarsSection";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
         }}
       >
         <div className="text-left text-black container mx-auto">
-          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4">
+          <h3 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-4  pl-6"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
             About Us
           </h3>
         </div>
@@ -125,14 +126,14 @@ const About = () => {
             <button className="btn-gray-call mb-4">
               Schedule a call with us
             </button>
-            <p className="paragraph">
-              <a
+            <div className="paragraph">
+              <Link
                 href="#"
                 className="text-dark text-decoration-underline call-paragraph"
               >
                 Click on the FAQs page to know more about how we can help you?
-              </a>
-            </p>
+              </Link>
+            </div>
           </div>
         </div>
         <hr />
