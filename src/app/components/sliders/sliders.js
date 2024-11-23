@@ -9,8 +9,13 @@ const Sliders = () => {
   const slides = [
     {
       id: 1,
-      content:
-        "Launching with Purpose Performance Marketing Strategies that Strike Gold",
+      content: (
+        <>
+          Launching with Purpose  <br /> Performance
+         
+          Marketing Strategies that Strike Gold
+        </>
+      ),
       buttonText: "Launch your business to new heights with us!",
       backgroundImage: "/Homepage-Hero-Banner.png",
     },
@@ -22,8 +27,13 @@ const Sliders = () => {
     },
     {
       id: 3,
-      content:
-        "Smarter Risk Management: How Startups and SMBs Can Harness AI and Data Analytics",
+      content: (
+        <>
+          Smarter Risk Management
+          <br />
+          How Startups and SMBs Can Harness AI and Data Analytics
+        </>
+      ),
       buttonText: "Transform your approach to risk management today!",
       backgroundImage: "/Homepage-Hero-Banner-3.png",
     },
@@ -92,12 +102,12 @@ const Sliders = () => {
     <MdKeyboardArrowRight size={24} />
   </button>
 
-      <div className="absolute bottom-4 left-6 flex space-x-2">
+      <div className="absolute bottom-4 z-50 flex space-x-2 w-[100%] justify-center">
         {slides.map((_, index) => (
           <span
             key={index}
             className={`w-3 h-3 rounded-full cursor-pointer ${
-              currentSlide === index ? "bg-black" : "bg-gray-400"
+              currentSlide === index ? "bg-white" : "bg-gray-200"
             }`}
             onClick={() => goToSlide(index)}
           ></span>

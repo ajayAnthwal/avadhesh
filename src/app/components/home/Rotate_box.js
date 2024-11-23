@@ -74,18 +74,18 @@ const RotateBox = () => {
             className="relative border border-black w-full mx-auto"
             style={{ background: "#FFB055" }}
           >
-            <div className="relative w-full mx-auto overflow-hidden container sm:max-w-screen-xl md:max-w-screen-2xl">
+            <div className="relative w-full mx-auto  container sm:max-w-screen-xl md:max-w-screen-2xl">
               <div className="flex items-center justify-between p-4 flex-col sm:flex-row">
                 <button
-                  className="bg-gray-600 text-white p-2 rounded-full mb-4 sm:mb-0"
+                  className="text-white p-2 rounded-full mb-4 sm:mb-0"
                   onClick={prevSlide}
                   style={{ marginRight: "10px" }}
                 >
-                  <MdKeyboardArrowLeft size={24} />
+                  <MdKeyboardArrowLeft size={81} />
                 </button>
 
                 <div className="flex w-full items-center justify-center mx-auto flex-col sm:flex-row">
-                  <div className="relative w-full sm:w-1/3 h-full overflow-hidden mb-4 sm:mb-0">
+                  <div className="relative w-full sm:w-1/3 h-full  mb-4 sm:mb-0 rotate-slider">
                     <Image
                       src={slides[currentIndex].image}
                       alt="Event Image"
@@ -106,11 +106,11 @@ const RotateBox = () => {
                 </div>
 
                 <button
-                  className="bg-gray-600 text-white p-2 rounded-full mt-4 sm:mt-0"
+                  className=" text-white p-2 rounded-full mt-4 sm:mt-0"
                   onClick={nextSlide}
                   style={{ marginLeft: "10px" }}
                 >
-                  <MdKeyboardArrowRight size={24} />
+                  <MdKeyboardArrowRight size={81} />
                 </button>
               </div>
             </div>

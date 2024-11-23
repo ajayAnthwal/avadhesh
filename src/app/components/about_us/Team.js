@@ -6,10 +6,10 @@ const Team = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold mb-6">Our differentiators</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 items-stretch">
-          <div className="bg-orange-400 text-white p-6 rounded-lg shadow-lg flex flex-col">
+          <div className="bg-orange-400 text-white p-6 rounded-lg shadow-lg flex flex-col  h-[auto]">
             <div className="mr-4">
               <svg
-                className="w-8 h-8 text-white"
+                className="w-16 h-14 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -30,18 +30,18 @@ const Team = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-left">Outcome Focused</h3>
-              <p className="text-left">
+              <h3 className="text-xl font-bold text-left marketing-heading py-3">Outcome Focused</h3>
+              <p className="text-left marketing-description ">
                 We mutually define outcomes that deliver value for our
                 customers.
               </p>
             </div>
           </div>
 
-          <div className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg flex flex-col">
+          <div className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg flex flex-col h-[auto]">
             <div className="mr-4">
               <svg
-                className="w-8 h-8 text-black"
+                className="w-16 h-14 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -56,20 +56,20 @@ const Team = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-left">
+              <h3 className="text-xl font-bold text-left marketing-heading py-3">
                 Flexible Commercial Models
               </h3>
-              <p className="text-left">
+              <p className="text-left marketing-description">
                 We engage with our customers in various commercial models
                 including short, long term, and transaction-based pricing.
               </p>
             </div>
           </div>
 
-          <div className="bg-green-400 text-black p-6 rounded-lg shadow-lg flex flex-col">
+          <div className="bg-green-400 text-black p-6 rounded-lg shadow-lg flex flex-col h-[280px]">
             <div className="mr-4">
               <svg
-                className="w-8 h-8 text-black"
+                className="w-16 h-14 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -96,18 +96,18 @@ const Team = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-left">IP & Assets</h3>
-              <p className="text-left">
+              <h3 className="text-xl font-bold text-left marketing-heading py-3">IP & Assets</h3>
+              <p className="text-left marketing-description">
                 We continuously invest in building internal assets to
                 differentiate our services.
               </p>
             </div>
           </div>
 
-          <div className="bg-blue-400 text-white p-6 rounded-lg shadow-lg flex flex-col">
+          <div className="bg-blue-400 text-white p-6 rounded-lg shadow-lg flex flex-col  h-[280px]">
             <div className="mr-4">
               <svg
-                className="w-8 h-8 text-white"
+                className="w-16 h-14 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -122,16 +122,16 @@ const Team = () => {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-left">
+              <h3 className="text-xl font-bold text-left marketing-heading py-3">
                 Integrated Approach
               </h3>
-              <p className="text-left">
+              <p className="text-left marketing-description">
                 We leverage multiple mediums & functional capabilities to
                 achieve the desired outcomes
               </p>
             </div>
           </div>
-        </div>
+        </div>  
       </div>
     </section>
   );

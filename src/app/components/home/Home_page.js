@@ -64,7 +64,7 @@ const HomePage = () => {
                     "url('abstract-backdrop-with-multi-colored-pattern-futuristic-motion-generated-by-ai.jpg')",
                 }}
               >
-                <div className="content text-lg">
+                <div className="content text-lg border border-white rounded-2xl">
                   <Image
                     src="/geometric-abstract-design-with-minimalistic-shapes-neutral-background.jpg"
                     alt="image"
@@ -76,7 +76,10 @@ const HomePage = () => {
                   />
                 </div>
 
-                <h2 className="text-white text-[26px] mt-4 text-center"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                <h2
+                  className="text-white text-[26px] mt-4 text-center"
+                  style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                >
                   Get a CFaaS Offering E-book
                 </h2>
 
@@ -88,8 +91,8 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Card 1 */}
                 <div
                   className="relative h-72 bg-white rounded-md shadow-lg"
@@ -99,27 +102,42 @@ const HomePage = () => {
                     backgroundPosition: "top",
                   }}
                 >
-                  <div className="absolute top-4 left-3 text-white text-2xl font-semibold"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
-                    Learn to Manage Imposter Syndrome
+                  <div
+                    className="absolute top-4 left-3 text-white text-2xl font-semibold text-left"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
+                    Learn to Manage <br /> Imposter Syndrome
                   </div>
                 </div>
 
                 {/* Card 2 */}
                 <div className="h-72 bg-purple-500 rounded-md shadow-lg flex flex-col justify-between p-4">
-                  <div className="text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                  <div
+                    className="text-black text-2xl font-semibold text-left"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
                     Brand Your Armor for 2024 and Beyond
                   </div>
-                  <div className="text-black text-[20px] text-left font-medium"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                  <div
+                    className="text-black text-[20px] text-left font-medium"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
                     Learn More &gt;
                   </div>
                 </div>
 
                 {/* Card 3 */}
                 <div className="h-72 bg-orange-500 rounded-md shadow-lg flex flex-col justify-between p-4">
-                  <div className="text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
-                    Amplify Your Tech Journey
+                  <div
+                    className="text-black text-2xl font-semibold text-left"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
+                    Amplify Your Tech <br /> Journey
                   </div>
-                  <div className="text-black text-[20px] text-left font-medium"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                  <div
+                    className="text-black text-[20px] text-left font-medium"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
                     Learn More &gt;
                   </div>
                 </div>
@@ -133,7 +151,10 @@ const HomePage = () => {
                     backgroundPosition: "center",
                   }}
                 >
-                  <div className="absolute top-4 left-3 text-black text-2xl font-semibold text-left"  style={{ fontFamily: '"Libre Caslon Text", serif' }}>
+                  <div
+                    className="absolute top-4 left-3 text-black text-2xl font-semibold text-left"
+                    style={{ fontFamily: '"Libre Caslon Text", serif' }}
+                  >
                     Content Marketing for Google Algorithm or for Your Readers?
                   </div>
                 </div>
