@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function FAQ() {
@@ -68,11 +69,21 @@ export default function FAQ() {
                     <FaPlus className="text-xl" />
                   )}
                 </button>
-                {activeIndex === index && (
-                  <div className="px-4 pb-4 text-gray-600 text-left bg-white py-8">
+                <motion.div
+                  initial={{ height: 0 }}
+                  animate={{
+                    height: activeIndex === index ? "auto" : 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <div className="px-4 pb-4 text-gray-600 text-left bg-white">
                     {faq.answer}
                   </div>
-                )}
+                </motion.div>
               </div>
             ))}
           </div>

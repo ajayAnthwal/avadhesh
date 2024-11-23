@@ -5,8 +5,8 @@ const Team = () => {
     <section className="py-12 px-4-5">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold mb-6">Our differentiators</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-          <div className=" bg-orange-400 text-white p-6 rounded-lg shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 items-stretch">
+          <div className="bg-orange-400 text-white p-6 rounded-lg shadow-lg flex flex-col">
             <div className="mr-4">
               <svg
                 className="w-8 h-8 text-white"
@@ -38,7 +38,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className=" bg-yellow-400 text-black p-6 rounded-lg shadow-lg">
+          <div className="bg-yellow-400 text-black p-6 rounded-lg shadow-lg flex flex-col">
             <div className="mr-4">
               <svg
                 className="w-8 h-8 text-black"
@@ -66,7 +66,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className=" bg-green-400 text-black p-6 rounded-lg shadow-lg">
+          <div className="bg-green-400 text-black p-6 rounded-lg shadow-lg flex flex-col">
             <div className="mr-4">
               <svg
                 className="w-8 h-8 text-black"
@@ -104,7 +104,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className=" bg-blue-400 text-white p-6 rounded-lg shadow-lg">
+          <div className="bg-blue-400 text-white p-6 rounded-lg shadow-lg flex flex-col">
             <div className="mr-4">
               <svg
                 className="w-8 h-8 text-white"
@@ -126,7 +126,8 @@ const Team = () => {
                 Integrated Approach
               </h3>
               <p className="text-left">
-              We leverage multiple mediums & functional capabilities to achieve the desired outcomes
+                We leverage multiple mediums & functional capabilities to
+                achieve the desired outcomes
               </p>
             </div>
           </div>

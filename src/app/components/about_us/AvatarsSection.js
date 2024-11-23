@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
@@ -9,9 +9,10 @@ const AvatarsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [maxToShow, setMaxToShow] = useState(3);
   const [isViewMore, setIsViewMore] = useState(false);
+  const viewAllRef = useRef(null); // Ref for scrolling into view
 
   const avatars = [
-    // Same team members array
+    // Team members array
     { id: 1, name: "Shristi Shrivastava", title: "Digital Marketing Manager", img: "/1.png" },
     { id: 2, name: "Arun S", title: "Digital Marketing Executive", img: "/6.png" },
     { id: 3, name: "Adarsh Kangra", title: "UI/UX Designer", img: "/11.png" },
@@ -59,6 +60,11 @@ const AvatarsSection = () => {
 
   const handleViewMore = () => {
     setIsViewMore(!isViewMore);
+
+    // Add smooth scrolling into view when expanding
+    if (!isViewMore && viewAllRef.current) {
+      viewAllRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -72,7 +78,7 @@ const AvatarsSection = () => {
         priority
       />
       <section className="py-12 bg-gradient-to-b from-[#FFF1B9] to-[#FFF1B9] px-4-5">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center" ref={viewAllRef}>
           <h2 className="text-xl font-bold mb-6">Meet the AvaStars</h2>
           {!isViewMore ? (
             <>
@@ -122,7 +128,7 @@ const AvatarsSection = () => {
                 className="mt-8 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-[#FFF1B8]"
                 onClick={handleViewMore}
               >
-               View all team
+                View all team
               </button>
             </>
           ) : (
