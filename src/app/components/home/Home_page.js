@@ -23,7 +23,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 px-2 md:px-0">
             <h2 className="text-left text-2xl font-bold mb-4">
               Augment. Amplify. Accelerate. 
             </h2>

@@ -129,7 +129,7 @@ const it_support_management = () => {
         </section>
       </div>
       <CFaaS />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 md:px-0">
         <h1 className="text-center text-3xl font-bold mb-6">
           IT Support & Management
         </h1>
@@ -138,7 +138,7 @@ const it_support_management = () => {
           management solutions for success. 
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-5 container mx-auto px-2 md:px-0">
         {services.map((service, index) => (
           <div
             key={index}
@@ -171,7 +171,7 @@ const it_support_management = () => {
             width={100}
             height={100}
           />
-          <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop">
+          <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop px-2 md:px-0">
             <div className="container mx-auto">
               <h1 className="text-center text-3xl font-bold mb-6">
                 Recommended IT Support Insights
@@ -189,7 +189,7 @@ const it_support_management = () => {
               </div>
             </div>
           </section>
-          <div className="flex flex-col items-center py-12 mx-auto bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+          <div className="px-2 md:px-0 flex flex-col items-center py-12 mx-auto bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
             <div className="text-center mb-12 max-w-4xl">
               <h1 className="text-center about-title text-4xl font-bold mb-6">
                 Have Questions?

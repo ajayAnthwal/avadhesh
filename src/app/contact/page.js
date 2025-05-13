@@ -60,7 +60,7 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className="bg-gray-50 flex flex-col justify-between">
+      <div className="bg-gray-50 flex flex-col justify-between px-2 md:px-0">
         <div className="container mx-auto py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>

@@ -20,7 +20,7 @@ const Case_study = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full px-2 md:px-0">
       <div>
         <section className="pt-12 bg-white res-desktop">
           <div className="container mx-auto">

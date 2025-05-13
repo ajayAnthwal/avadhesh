@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Marketing = () => {
   return (
-    <div className="w-full">
+    <div className="w-full px-2 md:px-0 ">
       <div className="container m-auto ">
         <section className="flex flex-col items-center justify-center py-8 bg-white">
           <div className="bg-[#FDA20F] p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center w-full container res-ebook">

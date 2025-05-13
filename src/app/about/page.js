@@ -22,11 +22,11 @@ const About = () => {
           </h3>
         </div>
       </div>
-      <div className="container mx-auto my-6">
+      <div className="container mx-auto my-6 px-2 md:px-0">
         <h2 className="text-center text-2xl font-bold mb-4">
           Know more about us & explore the story of <br /> how can we help you
         </h2>
-        <div className="flex flex-col md:flex-row gap-6 justify-between">
+        <div className="flex flex-col md:flex-row gap-6 justify-between px-2 md:px-0">
           <div className="flex justify-center items-center md:justify-start w-full md:w-1/2">
             <p className="text-justify">
               At AvadheshCo, we fuel business growth by driving innovation and
@@ -56,7 +56,7 @@ const About = () => {
           width={1000}
           height={200}
         />
-        <div className="w-full bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+        <div className="w-full bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] px-2 md:px-0">
           <div className="container m-auto">
             <div className="text-center w-full mx-auto">
               <h2 className="text-center text-2xl font-bold mb-4">
@@ -85,7 +85,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full md:w-1/2">
+                  <div className="w-full md:w-1/2 px-2 md:px-0">
                     <h2 className="text-left text-2xl font-bold mb-4">
                       Augment. Amplify. Accelerate.
                     </h2>
@@ -118,7 +118,7 @@ const About = () => {
 
         <Team />
         <AvatarsSection />
-        <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl">
+        <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl px-2 md:px-0">
           <div className="text-center mb-12 max-w-4xl">
             <h1 className="text-center about-title text-4xl font-bold mb-6">
               Have Questions?

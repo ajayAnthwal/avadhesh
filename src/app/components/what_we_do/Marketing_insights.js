@@ -34,7 +34,7 @@ const Marketing_insights = () => {
           width={100}
           height={100}
         />
-        <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop">
+        <section className="pt-12 bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB] res-desktop px-2 md:px-0">
           <div className="container mx-auto">
             <h1 className="text-center text-3xl font-bold mb-6">
               Recommended Marketing Insights
@@ -71,7 +71,7 @@ const Marketing_insights = () => {
             </div>
           </div>
 
-          <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+          <div className="px-2 md:px-0 container flex flex-col items-center py-12 mx-auto max-w-screen-xl bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
             <div className="text-center mb-12 max-w-4xl">
               <h1 className="text-center about-title text-4xl font-bold mb-6">
                 Have Questions?

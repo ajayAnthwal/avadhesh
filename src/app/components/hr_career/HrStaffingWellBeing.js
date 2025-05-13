@@ -36,7 +36,7 @@ const services = [
 
 const HrStaffingWellBeing = () => {
   return (
-    <div className="py-10 res-desktop">
+    <div className="py-10 res-desktop px-2 md:px-0">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold">HR, Staffing & Well Being</h2>
         <p className="text-gray-500">
@@ -70,7 +70,7 @@ const HrStaffingWellBeing = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[100%] mx-auto mt-6 bottom-service-hr container px-4-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[100%] mx-auto mt-6 bottom-service-hr container px-0 md:px-4-5">
         {services.slice(3, 5).map((service, index) => (
           <div
             key={index}

@@ -24,7 +24,7 @@ const Hr_insights = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full px-2 md:px-0">
       <div className="mt-7">
         <Image
           src="/Vector (2).png"
@@ -52,7 +52,7 @@ const Hr_insights = () => {
             </div>
           </div>
 
-          <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
+          <div className="px-2 md:px-0 container flex flex-col items-center py-12 mx-auto max-w-screen-xl bg-gradient-to-b from-[#D3F1FB] to-[#D3F1FB]">
             <div className="text-center mb-12 max-w-4xl">
               <h1 className="text-center text-4xl font-bold mb-6">
                 Have Questions?

@@ -53,7 +53,7 @@ const services = [
 
 const MarketingServices = () => {
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center mt-10 px-2 md:px-0">
       <div className="container">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold">Our Marketing Services</h2>

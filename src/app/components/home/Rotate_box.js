@@ -117,7 +117,7 @@ const RotateBox = () => {
           </div>
         </div>
 
-        <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl">
+        <div className="container flex flex-col items-center py-12 mx-auto max-w-screen-xl px-2 md:px-0">
           <div className="text-center mb-12 max-w-4xl">
             <h1 className="text-center about-title text-4xl font-bold mb-6">
               Have Questions?

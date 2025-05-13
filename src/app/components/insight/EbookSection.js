@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function EbookSection() {
   return (
-    <div className="w-full">
+    <div className="w-full px-2 md:px-0">
       <div className="container m-auto ">
         <section className="flex flex-col items-center justify-center py-8 bg-white">
           <div className="text-center mb-8">
